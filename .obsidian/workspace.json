@@ -1,0 +1,207 @@
+{
+  "main": {
+    "id": "d85ef4d9d70591bd",
+    "type": "split",
+    "children": [
+      {
+        "id": "9e4a8bc1a3027a37",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "574150741058f6c2",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1. 임시메모/L3 수준에서 외워야할 것.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "ce9823fb8a883b37",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1. 임시메모/IPv4 헤더 형식.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "93970f2c062d4a0b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1. 임시메모/TCP IP.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "483b5b0c14d19851",
+    "type": "split",
+    "children": [
+      {
+        "id": "0b94ca8d690a0f5f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b86c7bd707878197",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "663a69b8832b6e25",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3e9559ecf71ee7a2",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a3a2d8397bcd1274",
+    "type": "split",
+    "children": [
+      {
+        "id": "a4389d9fbb260286",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b29101c8d75604e3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "1. 임시메모/IPv4 헤더 형식.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "cda969f808018576",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "1. 임시메모/IPv4 헤더 형식.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7a6ecfc7e0c2ced1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "76c171cb6b3a2de9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "1. 임시메모/IPv4 헤더 형식.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "ce9823fb8a883b37",
+  "lastOpenFiles": [
+    "첨부파일/Pasted image 20230817172731.png",
+    "1. 임시메모/TCP IP.md",
+    "1. 임시메모/IPv4 헤더 형식.md",
+    "1. 임시메모/네트워크 장애 분류.md",
+    "1. 임시메모/L3 수준에서 외워야할 것.md",
+    "첨부파일/Pasted image 20230817171946.png",
+    "첨부파일/Pasted image 20230817171934.png",
+    "첨부파일/Pasted image 20230817171850.png",
+    "1. 임시메모/L2 수준에서 외워야할 것.md",
+    "1. 임시메모/L3 IP Packet.md",
+    "첨부파일/Pasted image 20230817171517.png",
+    "첨부파일/Pasted image 20230817170913.png",
+    "첨부파일/Pasted image 20230817170859.png",
+    "첨부파일/Pasted image 20230817170755.png",
+    "첨부파일/Pasted image 20230817170558.png",
+    "첨부파일/Pasted image 20230817170357.png",
+    "첨부파일/Pasted image 20230817165904.png",
+    "TCP/IP.md",
+    "TCP",
+    "1. 임시메모/OSI 7Layer.md",
+    "1. 임시메모/각 계층별 데이터 단위.md",
+    "1. 임시메모/IP주소.md",
+    "1. 임시메모/Switch는 무엇인가.md",
+    "1. 임시메모/Host란 무엇인가.md",
+    "0. Map_Of_Contents/프로그래밍 MOC.md",
+    "0. Map_Of_Contents/프로그래밍.Network MOC.md",
+    "1. 임시메모/L2 switch.md",
+    "0. Map_Of_Contents/0_MOC Home.md"
+  ]
+}
