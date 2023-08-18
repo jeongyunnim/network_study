@@ -14,20 +14,18 @@ Alias: "" # 한글/영어
 ### 태그: #프로그래밍/네트워크
 
 >[!메모]
-> 차후에 더 깊게 다룰 내용
+> 인터넷 환경에서 가장 중요한 4계층 프로토콜
+
 ### 학습 내용
 ---
-## IPv4 헤더 형식
-![[Pasted image 20230817172731.png]]
-- version: IPv4이므로 값은 4이다.
-- IHL(Internet Header Length)
-	- 일반적으로 5의 값을 가진다.
-	- 몇 행을 나타내는지 알려주는데, 한 행을 32(1byte)로 두고 있으므로 총 20바이트가 된다.
-- TOS(Type of Service)
-- Total length: 패킷의 총 길이
-	- 16비트로 표현 가능
-	![[Pasted image 20230817184207.png]]
-	- 여기서 말하는 바이트 수는 이론상 $2^{16}$에서 헤더의 길이를 뺀 최대 길이이다.
+## TCP 와 UDP
+- TCP에만 **연결**(Connection, Session이라는 걔념이 있음.
+	- *virtual circuit*이라고도 부른다.
+- 연결은 **'상태(전이)' 개념을 동반**한다.
+![[Pasted image 20230817210937.png]]
+- 연결 대기하는 쪽(socket) 또한 소켓을 열고 개방한다.
+- 만약 listen이 안 되어있는 서버와 통신을 하려고 패킷을 보내려 하면 TCP 포트 쪽에서 에러가 난다.
+	- OS가 잘 막아줌.
 ---
 ### 생각 (파생된 질문/생각)
 
@@ -35,3 +33,4 @@ Alias: "" # 한글/영어
 - [인프런/외워서 끝내는 네트워크 핵심이론 - 기초 ](https://www.inflearn.com/course/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%ED%95%B5%EC%8B%AC%EC%9D%B4%EB%A1%A0-%EA%B8%B0%EC%B4%88/dashboard)
 
 ### 연결 문서: {연결 이유}
+- [[Listen상태]]

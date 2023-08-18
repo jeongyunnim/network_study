@@ -14,22 +14,20 @@ Alias: "" # 한글/영어
 ### 태그: #프로그래밍/네트워크
 
 >[!메모]
-> 차후에 더 깊게 다룰 내용
+> Ping은 RTT를 측정하는 프로그램이다.
+
 ### 학습 내용
 ---
-## IPv4 헤더 형식
-![[Pasted image 20230817172731.png]]
-- version: IPv4이므로 값은 4이다.
-- IHL(Internet Header Length)
-	- 일반적으로 5의 값을 가진다.
-	- 몇 행을 나타내는지 알려주는데, 한 행을 32(1byte)로 두고 있으므로 총 20바이트가 된다.
-- TOS(Type of Service)
-- Total length: 패킷의 총 길이
-	- 16비트로 표현 가능
-	![[Pasted image 20230817184207.png]]
-	- 여기서 말하는 바이트 수는 이론상 $2^{16}$에서 헤더의 길이를 뺀 최대 길이이다.
+## PING
+- Ping 유틸리티(프로그램)은 특정 Host에 대한 RTT(Round Trip Time)을 측정할 목적으로 사용된다.
+- ICMP(Internet Control Massage Protocol)을 이용한다.
+- Dos(Denial of Service)공격으로 악용되기도 한다.
+	- CPU 점유율을 높여 ping을 서버에 무한히 요청할 수 있음.
+- echo request이다.
+	- abcd...z를 echo할테니 너도 같은 문자열을 echo해줘.
 ---
 ### 생각 (파생된 질문/생각)
+- 패킷이 어떻게 타고 가는 것인지?
 
 ### 출 처
 - [인프런/외워서 끝내는 네트워크 핵심이론 - 기초 ](https://www.inflearn.com/course/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%ED%95%B5%EC%8B%AC%EC%9D%B4%EB%A1%A0-%EA%B8%B0%EC%B4%88/dashboard)

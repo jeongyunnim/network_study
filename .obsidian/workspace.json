@@ -4,49 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "9e4a8bc1a3027a37",
+        "id": "77bdef15c2ec5271",
         "type": "tabs",
         "children": [
           {
-            "id": "574150741058f6c2",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1. 임시메모/L3 수준에서 외워야할 것.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "ce9823fb8a883b37",
+            "id": "d2c17a04e45ffec2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1. 임시메모/IPv4 헤더 형식.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "93970f2c062d4a0b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1. 임시메모/TCP IP.md",
+                "file": "1. 임시메모/L4 수준에서 외워야할 것.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300.5
   },
   "right": {
     "id": "a3a2d8397bcd1274",
@@ -112,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1. 임시메모/IPv4 헤더 형식.md",
+                "file": "1. 임시메모/L4 수준에서 외워야할 것.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1. 임시메모/IPv4 헤더 형식.md",
+                "file": "1. 임시메모/L4 수준에서 외워야할 것.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1. 임시메모/IPv4 헤더 형식.md"
+                "file": "1. 임시메모/L4 수준에서 외워야할 것.md"
               }
             }
           }
@@ -173,34 +146,40 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ce9823fb8a883b37",
+  "active": "d2c17a04e45ffec2",
   "lastOpenFiles": [
-    "첨부파일/Pasted image 20230817172731.png",
-    "1. 임시메모/TCP IP.md",
-    "1. 임시메모/IPv4 헤더 형식.md",
-    "1. 임시메모/네트워크 장애 분류.md",
+    "1. 임시메모/TCP와 UDP 개요.md",
+    "1. 임시메모/Ping과 RTT.md",
     "1. 임시메모/L3 수준에서 외워야할 것.md",
+    "첨부파일/Pasted image 20230817210937.png",
+    "1. 임시메모/L4 수준에서 외워야할 것.md",
+    "1. 임시메모/Host란 무엇인가.md",
+    "1. 임시메모/ARP.md",
+    "1. 임시메모/DHCP.md",
+    "0. Map_Of_Contents/프로그래밍.Network MOC.md",
+    "0. Map_Of_Contents/프로그래밍 MOC.md",
+    "첨부파일/Pasted image 20230817195658.png",
+    "1. 임시메모/인터넷이란.md",
+    "1. 임시메모/Subnet Mask.md",
+    "1. 임시메모/TCP IP.md",
+    "첨부파일/Pasted image 20230817184753.png",
+    "첨부파일/Pasted image 20230817184617.png",
+    "첨부파일/Pasted image 20230817184519.png",
+    "1. 임시메모/IPv4 헤더 형식.md",
+    "첨부파일/Pasted image 20230817184207.png",
+    "첨부파일/Pasted image 20230817172731.png",
+    "1. 임시메모/네트워크 장애 분류.md",
     "첨부파일/Pasted image 20230817171946.png",
     "첨부파일/Pasted image 20230817171934.png",
     "첨부파일/Pasted image 20230817171850.png",
     "1. 임시메모/L2 수준에서 외워야할 것.md",
     "1. 임시메모/L3 IP Packet.md",
-    "첨부파일/Pasted image 20230817171517.png",
-    "첨부파일/Pasted image 20230817170913.png",
-    "첨부파일/Pasted image 20230817170859.png",
-    "첨부파일/Pasted image 20230817170755.png",
-    "첨부파일/Pasted image 20230817170558.png",
-    "첨부파일/Pasted image 20230817170357.png",
-    "첨부파일/Pasted image 20230817165904.png",
     "TCP/IP.md",
     "TCP",
     "1. 임시메모/OSI 7Layer.md",
     "1. 임시메모/각 계층별 데이터 단위.md",
     "1. 임시메모/IP주소.md",
     "1. 임시메모/Switch는 무엇인가.md",
-    "1. 임시메모/Host란 무엇인가.md",
-    "0. Map_Of_Contents/프로그래밍 MOC.md",
-    "0. Map_Of_Contents/프로그래밍.Network MOC.md",
     "1. 임시메모/L2 switch.md",
     "0. Map_Of_Contents/0_MOC Home.md"
   ]
