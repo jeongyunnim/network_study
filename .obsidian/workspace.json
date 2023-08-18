@@ -34,19 +34,18 @@
             }
           },
           {
-            "id": "66c0a6ed9646e904",
+            "id": "db87755ccfe8a050",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1. 임시메모/6-4. TCP 헤더 형식.md",
+                "file": "1. 임시메모/6-5. TCP '연결'.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -112,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1. 임시메모/6-4. TCP 헤더 형식.md",
+                "file": "1. 임시메모/6. L4 수준에서 외워야할 것.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1. 임시메모/6-4. TCP 헤더 형식.md",
+                "file": "1. 임시메모/6. L4 수준에서 외워야할 것.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1. 임시메모/6-4. TCP 헤더 형식.md"
+                "file": "1. 임시메모/6. L4 수준에서 외워야할 것.md"
               }
             }
           }
@@ -172,13 +171,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "66c0a6ed9646e904",
+  "active": "ef9d07c4294cc1da",
   "lastOpenFiles": [
-    "1. 임시메모/6. L4 수준에서 외워야할 것.md",
     "0. Map_Of_Contents/프로그래밍 MOC.md",
+    "1. 임시메모/6-5. TCP '연결'.md",
+    "1. 임시메모/6. L4 수준에서 외워야할 것.md",
+    "1. 임시메모/6-4. TCP 헤더 형식.md",
     "0. Map_Of_Contents/0_MOC Home.md",
     "0. Map_Of_Contents/프로그래밍.Network MOC.md",
-    "1. 임시메모/6-4. TCP 헤더 형식.md",
     "1. 임시메모/6-3. TCP 연결 종료 과정.md",
     "첨부파일/Pasted image 20230818170825.png",
     "1. 임시메모/6-2. TCP 연결 과정.md",
