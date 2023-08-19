@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "8d5d41f2a3191837",
+        "id": "a0ffed2a27c263b6",
         "type": "tabs",
         "children": [
           {
-            "id": "857fe923ea5c8613",
+            "id": "0315731a0dbe9dfb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1. 임시메모/7. DNS.md",
+                "file": "1. 임시메모/URL과 URI.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1. 임시메모/7. DNS.md",
+                "file": "1. 임시메모/URL과 URI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1. 임시메모/7. DNS.md",
+                "file": "1. 임시메모/URL과 URI.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1. 임시메모/7. DNS.md"
+                "file": "1. 임시메모/URL과 URI.md"
               }
             }
           }
@@ -145,21 +145,30 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "857fe923ea5c8613",
+  "active": "0315731a0dbe9dfb",
   "lastOpenFiles": [
-    "첨부파일/Pasted image 20230818210948.png",
-    "첨부파일/Pasted image 20230818210801.png",
+    "첨부파일/Pasted image 20230819170219.png",
+    "1. 임시메모/8. Web을 이루는 핵심기술.md",
     "1. 임시메모/7. DNS.md",
+    "1. 임시메모/6. L4 수준에서 외워야할 것.md",
+    "1. 임시메모/6-5. TCP '연결'.md",
+    "1. 임시메모/6-4. TCP 헤더 형식.md",
+    "template/네트워크 강의 템플릿.md",
+    "1. 임시메모/URL과 URI.md",
+    "0. Map_Of_Contents/프로그래밍.Network MOC.md",
+    "1. 임시메모/네트워크 장애 분류.md",
+    "첨부파일/Pasted image 20230819164923.png",
+    "첨부파일/Pasted image 20230818210948.png",
+    "1. 임시메모/4. L2 수준에서 외워야할 것.md",
+    "1. 임시메모/5-1. IP주소.md",
+    "Untitled.canvas",
+    "첨부파일/Pasted image 20230818210801.png",
     "1. 임시메모/5-8. DHCP.md",
     "1. 임시메모/ISP(Internet Service Provider).md",
-    "1. 임시메모/6-5. TCP '연결'.md",
     "첨부파일/Pasted image 20230818204334.png",
-    "0. Map_Of_Contents/프로그래밍.Network MOC.md",
     "1. 임시메모/[7. DNS.md",
     "0. Map_Of_Contents/프로그래밍 MOC.md",
     "0. Map_Of_Contents/0_MOC Home.md",
-    "1. 임시메모/6. L4 수준에서 외워야할 것.md",
-    "1. 임시메모/6-4. TCP 헤더 형식.md",
     "1. 임시메모/6-3. TCP 연결 종료 과정.md",
     "첨부파일/Pasted image 20230818170825.png",
     "1. 임시메모/6-2. TCP 연결 과정.md",
@@ -171,19 +180,11 @@
     "첨부파일/Pasted image 20230818163402.png",
     "첨부파일/Pasted image 20230818161829.png",
     "1. 임시메모/6-1. TCP와 UDP 개요.md",
-    "template/네트워크 강의 템플릿.md",
     "template",
     "1. 임시메모/5-7. 인터넷이란.md",
     "1. 임시메모/5-9. ARP.md",
     "1. 임시메모/5-6. Subnet Mask.md",
     "1. 임시메모/5-4. TCP IP.md",
-    "1. 임시메모/5-5. IPv4 헤더 형식.md",
-    "1. 임시메모/5-2. L3 IP Packet.md",
-    "1. 임시메모/5-1. IP주소.md",
-    "1. 임시메모/4. L2 수준에서 외워야할 것.md",
-    "1. 임시메모/3. Switch는 무엇인가.md",
-    "첨부파일/Pasted image 20230817210937.png",
-    "첨부파일/Pasted image 20230817195658.png",
     "1. 임시메모",
     "0. Map_Of_Contents",
     "TCP"
