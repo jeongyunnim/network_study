@@ -19,11 +19,20 @@ Alias: "" # 한글/영어
 ---
 ## URL과 URI
 ![[Pasted image 20230819170219.png]]
-- URL: Uniform Resource Locator 
-	- 통합 자원 위치 지정자
 - URI: Uniform Resource Identifier
 	- 통합 자원 식별자
+	- ==scheme ":" \["//"authority]  path \["?" query] \["#" fragment]==
+	- Protocol://Address:Port number/Path(or filename)?**Parameter=value**
+	- \http://www.test.co.kr/course.do?cmd=serch&serch_weyword=Test
+	-  \http://www.test.co.kr - 여기까지만 보면 호스트 한 대를 식별할 수 있다.
+	- 일반적으로는 ~.com만 입력했을 경우 ~.com/index.html을 달라고 하는 것이다.
+	- '/'는 경로를 지정.
+	- 일반적으로 ==TCP80번 포트==를 사용한다.
+- URL: Uniform Resource Locator 
+	- 통합 자원 위치 지정자
+	- 파일을 특정하는  수준까지 간다.
 - 웹에서 resource란 무엇인가? 
+	- 파일이다.
 ---
 ### 생각 (파생된 질문/생각)
 - 
