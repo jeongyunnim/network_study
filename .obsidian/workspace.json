@@ -27,19 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0. Map_Of_Contents/프로그래밍.Network MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b83042265149af23",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/3. TCP 에코 서비스 전체 흐름.md",
+                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/4. 에코 서버 제작 - 서버 접속대기.md",
                 "mode": "source",
                 "source": false
               }
@@ -56,9 +44,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "93cf416a1d493ace",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/3. TCP 에코 서비스 전체 흐름.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -124,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "0. Map_Of_Contents/프로그래밍.Network MOC.md",
+                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/3. TCP 에코 서비스 전체 흐름.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "0. Map_Of_Contents/프로그래밍.Network MOC.md",
+                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/3. TCP 에코 서비스 전체 흐름.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -164,7 +164,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0. Map_Of_Contents/프로그래밍.Network MOC.md"
+                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/3. TCP 에코 서비스 전체 흐름.md"
               }
             }
           }
@@ -184,16 +184,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "06b7935f57d88849",
+  "active": "93cf416a1d493ace",
   "lastOpenFiles": [
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/1. 소켓의 본질에 대한 이해.md",
+    "0. Map_Of_Contents/프로그래밍.Network MOC.md",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/4. 에코 서버 제작 - 서버 접속대기.md",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/3. TCP 에코 서비스 전체 흐름.md",
+    "첨부파일/Pasted image 20230822203909.png",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/Untitled.md",
     "code/echoserver.cpp",
     "code",
-    "0. Map_Of_Contents/프로그래밍.Network MOC.md",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/3. TCP 에코 서비스 전체 흐름.md",
     "첨부파일/Pasted image 20230822182617.png",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/1. 소켓의 본질에 대한 이해.md",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/2. TCP 상태, 적절한 상태 전이.md",
     "첨부파일/Pasted image 20230822170613.png",
     "첨부파일/Pasted image 20230822164747.png",
@@ -223,7 +224,6 @@
     "첨부파일/Pasted image 20230820203124.png",
     "첨부파일/Pasted image 20230820203013.png",
     "첨부파일/Pasted image 20230820200939.png",
-    "첨부파일/Pasted image 20230820192816.png",
     "Untitled.canvas",
     "template",
     "1. 임시메모",
