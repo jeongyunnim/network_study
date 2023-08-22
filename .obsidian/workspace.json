@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1. 임시메모/웹 서비스 기본 구조.md",
+                "file": "0. Map_Of_Contents/프로그래밍.Network MOC.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1. 임시메모/웹 서비스 기본 구조.md",
+                "file": "0. Map_Of_Contents/프로그래밍.Network MOC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1. 임시메모/웹 서비스 기본 구조.md",
+                "file": "0. Map_Of_Contents/프로그래밍.Network MOC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1. 임시메모/웹 서비스 기본 구조.md"
+                "file": "0. Map_Of_Contents/프로그래밍.Network MOC.md"
               }
             }
           }
@@ -147,6 +147,10 @@
   },
   "active": "0315731a0dbe9dfb",
   "lastOpenFiles": [
+    "0. Map_Of_Contents/프로그래밍 MOC.md",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!",
+    "0. Map_Of_Contents/프로그래밍.Network MOC.md",
+    "template/네트워크 강의 템플릿.md",
     "첨부파일/Pasted image 20230820210953.png",
     "1. 임시메모/WAS.md",
     "첨부파일/Pasted image 20230820204509.png",
@@ -158,8 +162,6 @@
     "첨부파일/Pasted image 20230820183748.png",
     "첨부파일/Pasted image 20230820171340.png",
     "1. 임시메모/8. Web을 이루는 핵심기술.md",
-    "0. Map_Of_Contents/프로그래밍.Network MOC.md",
-    "0. Map_Of_Contents/프로그래밍 MOC.md",
     "0. Map_Of_Contents/0_MOC Home.md",
     "1. 임시메모/URL과 URI.md",
     "첨부파일/Pasted image 20230819170219.png",
@@ -167,10 +169,8 @@
     "1. 임시메모/6. L4 수준에서 외워야할 것.md",
     "1. 임시메모/6-5. TCP '연결'.md",
     "1. 임시메모/6-4. TCP 헤더 형식.md",
-    "template/네트워크 강의 템플릿.md",
     "1. 임시메모/네트워크 장애 분류.md",
     "첨부파일/Pasted image 20230819164923.png",
-    "첨부파일/Pasted image 20230818210948.png",
     "1. 임시메모/4. L2 수준에서 외워야할 것.md",
     "1. 임시메모/5-1. IP주소.md",
     "Untitled.canvas",
