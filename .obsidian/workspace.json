@@ -10,6 +10,20 @@
           {
             "id": "0315731a0dbe9dfb",
             "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0. Map_Of_Contents/프로그래밍.Network MOC.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "06b7935f57d88849",
+            "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
@@ -18,8 +32,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "b83042265149af23",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/3. TCP 에코 서비스 전체 흐름.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b37e75401cc24476",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/1. 소켓의 본질에 대한 이해.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -145,46 +184,48 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0315731a0dbe9dfb",
+  "active": "06b7935f57d88849",
   "lastOpenFiles": [
-    "0. Map_Of_Contents/프로그래밍 MOC.md",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/4. 에코 서버 제작 - 서버 접속대기.md",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/Untitled.md",
+    "code/echoserver.cpp",
+    "code",
     "0. Map_Of_Contents/프로그래밍.Network MOC.md",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/3. TCP 에코 서비스 전체 흐름.md",
+    "첨부파일/Pasted image 20230822182617.png",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/1. 소켓의 본질에 대한 이해.md",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/2. TCP 상태, 적절한 상태 전이.md",
+    "첨부파일/Pasted image 20230822170613.png",
+    "첨부파일/Pasted image 20230822164747.png",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/0. 소켓 프로그래밍 수업 목표.md",
     "template/네트워크 강의 템플릿.md",
+    "첨부파일/Pasted image 20230822155602.png",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/2. Host란 무엇인가.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-5. TCP '연결'.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-4. TCP 헤더 형식.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-2. L3 IP Packet.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-1. IP주소.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/4. L2 수준에서 외워야할 것.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/3. Switch는 무엇인가.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6. L4 수준에서 외워야할 것.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-3. TCP 연결 종료 과정.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-1. TCP와 UDP 개요.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5. L3 수준에서 외워야할 것.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-10. Ping과 RTT.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-9. ARP.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-8. DHCP.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-7. 인터넷이란.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-6. Subnet Mask.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-5. IPv4 헤더 형식.md",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!",
     "첨부파일/Pasted image 20230820210953.png",
-    "1. 임시메모/WAS.md",
     "첨부파일/Pasted image 20230820204509.png",
-    "1. 임시메모/웹 서비스 기본 구조.md",
     "첨부파일/Pasted image 20230820203124.png",
     "첨부파일/Pasted image 20230820203013.png",
     "첨부파일/Pasted image 20230820200939.png",
     "첨부파일/Pasted image 20230820192816.png",
-    "첨부파일/Pasted image 20230820183748.png",
-    "첨부파일/Pasted image 20230820171340.png",
-    "1. 임시메모/8. Web을 이루는 핵심기술.md",
-    "0. Map_Of_Contents/0_MOC Home.md",
-    "1. 임시메모/URL과 URI.md",
-    "첨부파일/Pasted image 20230819170219.png",
-    "1. 임시메모/7. DNS.md",
-    "1. 임시메모/6. L4 수준에서 외워야할 것.md",
-    "1. 임시메모/6-5. TCP '연결'.md",
-    "1. 임시메모/6-4. TCP 헤더 형식.md",
-    "1. 임시메모/네트워크 장애 분류.md",
-    "첨부파일/Pasted image 20230819164923.png",
-    "1. 임시메모/4. L2 수준에서 외워야할 것.md",
-    "1. 임시메모/5-1. IP주소.md",
     "Untitled.canvas",
-    "1. 임시메모/5-8. DHCP.md",
-    "1. 임시메모/ISP(Internet Service Provider).md",
-    "1. 임시메모/[7. DNS.md",
-    "1. 임시메모/6-3. TCP 연결 종료 과정.md",
-    "1. 임시메모/6-2. TCP 연결 과정.md",
-    "1. 임시메모/5. L3 수준에서 외워야할 것.md",
-    "1. 임시메모/5-10. Ping과 RTT.md",
-    "1. 임시메모/6-1. TCP와 UDP 개요.md",
     "template",
-    "1. 임시메모/5-7. 인터넷이란.md",
-    "1. 임시메모/5-9. ARP.md",
     "1. 임시메모",
     "0. Map_Of_Contents",
     "TCP"
