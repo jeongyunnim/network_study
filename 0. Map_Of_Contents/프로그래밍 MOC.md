@@ -5,8 +5,7 @@
 
 ```dataview
 Table 출처, 날짜
-where contains(태그, "프로그래밍")
-where contains(종류, "MOC")
+where contains(태그, "프로그래밍") and contains(종류, "MOC")
 sort 날짜 asc
 ```
 # 프로그래밍 언어
