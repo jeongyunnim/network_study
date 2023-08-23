@@ -8,42 +8,63 @@
         "type": "tabs",
         "children": [
           {
-            "id": "06b7935f57d88849",
+            "id": "f4d66212d717171d",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6. Archive/HTTP 완벽 가이드/1부 HTTP, 웹의 기초.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "5dbff9a1c92b4b39",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-3. TCP 연결 종료 과정.md",
+                "file": "6. Archive/HTTP 완벽 가이드/1-4 커넥션 관리.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "b83042265149af23",
+            "id": "cf63c2cbfe5e07b6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/3. TCP 에코 서비스 전체 흐름.md",
+                "file": "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/URL과 URI.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "b37e75401cc24476",
+            "id": "67f61f130342495b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "f6a305caf270b39a",
+            "type": "leaf",
+            "state": {
+              "type": "image",
               "state": {
-                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/1. 소켓의 본질에 대한 이해.md",
-                "mode": "source",
-                "source": false
+                "file": "첨부파일/Pasted image 20230820171340.png"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -109,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-3. TCP 연결 종료 과정.md",
+                "file": "첨부파일/Pasted image 20230820171340.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-3. TCP 연결 종료 과정.md",
+                "file": "첨부파일/Pasted image 20230820171340.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-3. TCP 연결 종료 과정.md"
+                "file": "첨부파일/Pasted image 20230820171340.png"
               }
             }
           }
@@ -169,54 +190,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "06b7935f57d88849",
+  "active": "f6a305caf270b39a",
   "lastOpenFiles": [
-    "0. Map_Of_Contents/프로그래밍.Network MOC.md",
+    "첨부파일/Pasted image 20230822203909.png",
+    "첨부파일/Pasted image 20230822155602.png",
+    "첨부파일/Pasted image 20230820200939.png",
+    "첨부파일/Pasted image 20230819164923.png",
+    "첨부파일/Pasted image 20230818164158.png",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-5. TCP '연결'.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6. L4 수준에서 외워야할 것.md",
+    "6. Archive/HTTP 완벽 가이드/MIME 타입.md",
+    "6. Archive/HTTP 완벽 가이드/1-1 HTTP 개관.md",
+    "첨부파일/Pasted image 20230823201503.png",
+    "6. Archive/HTTP 완벽 가이드/1부 HTTP, 웹의 기초.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/URL과 URI.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/8. Web을 이루는 핵심기술.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/7. DNS.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-4. TCP 헤더 형식.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-3. TCP 연결 종료 과정.md",
     "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-2. TCP 연결 과정.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-1. TCP와 UDP 개요.md",
+    "6. Archive/HTTP 완벽 가이드/1-4 커넥션 관리.md",
+    "첨부파일/Pasted image 20230823200223.png",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/트래픽.md",
+    "6. Archive/HTTP 완벽 가이드/0. HTTP 완벽 가이드.md",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/0. 소켓 프로그래밍 수업 목표.md",
+    "6. Archive/HTTP 완벽 가이드/1-3 HTTP 메세지.md",
+    "6. Archive/HTTP 완벽 가이드/1-2 URL과 리소스.md",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/1. 소켓의 본질에 대한 이해.md",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/3. TCP 에코 서비스 전체 흐름.md",
+    "template/HTTP 완벽 가이드 템플릿.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/1. OSI 7Layer.md",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/Untitled.md",
+    "template/네트워크 강의 템플릿.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/웹 서비스 기본 구조.md",
+    "6. Archive/HTTP 완벽 가이드",
     "code/client",
     "첨부파일/Pasted image 20230818161829.png",
     "첨부파일/Pasted image 20230817210937.png",
-    "첨부파일/Pasted image 20230818164158.png",
     "첨부파일/Pasted image 20230818163402.png",
     "첨부파일/Pasted image 20230818164715.png",
-    "첨부파일/Pasted image 20230818170825.png",
-    "첨부파일/Pasted image 20230817163141.png",
-    "첨부파일/Pasted image 20230816161058.png",
-    "첨부파일/Pasted image 20230816145136.png",
-    "첨부파일/Pasted image 20230815212853.png",
-    "첨부파일/Drawing 2023-07-23 17.10.10.excalidraw.md",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/4. 에코 서버 제작 - 서버 접속대기.md",
     "code/echoClient.cpp",
     "code/echoClient",
     "code/server",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/CODE COPY.md",
-    "template/네트워크 강의 템플릿.md",
     "template",
     "code/echoserver.cpp",
     "code",
-    "0. Map_Of_Contents/프로그래밍 MOC.md",
-    "0. Map_Of_Contents/0_MOC Home.md",
     "0. Map_Of_Contents",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/Untitled.md",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/3. TCP 에코 서비스 전체 흐름.md",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/1. 소켓의 본질에 대한 이해.md",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/2. TCP 상태, 적절한 상태 전이.md",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/0. 소켓 프로그래밍 수업 목표.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/2. Host란 무엇인가.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-5. TCP '연결'.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-4. TCP 헤더 형식.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-2. L3 IP Packet.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-1. IP주소.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/4. L2 수준에서 외워야할 것.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/3. Switch는 무엇인가.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6. L4 수준에서 외워야할 것.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-3. TCP 연결 종료 과정.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-1. TCP와 UDP 개요.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5. L3 수준에서 외워야할 것.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-10. Ping과 RTT.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-9. ARP.md",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!",
-    "Untitled.canvas",
-    "1. 임시메모"
+    "Untitled.canvas"
   ]
 }
