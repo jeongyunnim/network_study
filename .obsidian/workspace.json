@@ -56,9 +56,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "bc8c8ae1068f9869",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/CODE COPY.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -124,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/3. TCP 에코 서비스 전체 흐름.md",
+                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/CODE COPY.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +153,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/3. TCP 에코 서비스 전체 흐름.md",
+                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/CODE COPY.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -164,7 +176,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/3. TCP 에코 서비스 전체 흐름.md"
+                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/CODE COPY.md"
               }
             }
           }
@@ -184,14 +196,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "93cf416a1d493ace",
+  "active": "bc8c8ae1068f9869",
   "lastOpenFiles": [
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/3. TCP 에코 서비스 전체 흐름.md",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/CODE COPY.md",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/1. 소켓의 본질에 대한 이해.md",
     "0. Map_Of_Contents/프로그래밍.Network MOC.md",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/4. 에코 서버 제작 - 서버 접속대기.md",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/3. TCP 에코 서비스 전체 흐름.md",
     "첨부파일/Pasted image 20230822203909.png",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/Untitled.md",
     "code/echoserver.cpp",
     "code",
     "첨부파일/Pasted image 20230822182617.png",
