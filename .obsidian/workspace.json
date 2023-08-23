@@ -8,26 +8,24 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0315731a0dbe9dfb",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0. Map_Of_Contents/프로그래밍.Network MOC.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true
-            }
-          },
-          {
             "id": "06b7935f57d88849",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/4. 에코 서버 제작 - 서버 접속대기.md",
+                "file": "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-3. TCP 연결 종료 과정.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b83042265149af23",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/3. TCP 에코 서비스 전체 흐름.md",
                 "mode": "source",
                 "source": false
               }
@@ -44,33 +42,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "93cf416a1d493ace",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/3. TCP 에코 서비스 전체 흐름.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "bc8c8ae1068f9869",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/CODE COPY.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -136,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/CODE COPY.md",
+                "file": "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-3. TCP 연결 종료 과정.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -153,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/CODE COPY.md",
+                "file": "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-3. TCP 연결 종료 과정.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -176,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/CODE COPY.md"
+                "file": "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-3. TCP 연결 종료 과정.md"
               }
             }
           }
@@ -196,23 +169,39 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bc8c8ae1068f9869",
+  "active": "06b7935f57d88849",
   "lastOpenFiles": [
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/3. TCP 에코 서비스 전체 흐름.md",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/CODE COPY.md",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/1. 소켓의 본질에 대한 이해.md",
     "0. Map_Of_Contents/프로그래밍.Network MOC.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-2. TCP 연결 과정.md",
+    "code/client",
+    "첨부파일/Pasted image 20230818161829.png",
+    "첨부파일/Pasted image 20230817210937.png",
+    "첨부파일/Pasted image 20230818164158.png",
+    "첨부파일/Pasted image 20230818163402.png",
+    "첨부파일/Pasted image 20230818164715.png",
+    "첨부파일/Pasted image 20230818170825.png",
+    "첨부파일/Pasted image 20230817163141.png",
+    "첨부파일/Pasted image 20230816161058.png",
+    "첨부파일/Pasted image 20230816145136.png",
+    "첨부파일/Pasted image 20230815212853.png",
+    "첨부파일/Drawing 2023-07-23 17.10.10.excalidraw.md",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/4. 에코 서버 제작 - 서버 접속대기.md",
-    "첨부파일/Pasted image 20230822203909.png",
+    "code/echoClient.cpp",
+    "code/echoClient",
+    "code/server",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/CODE COPY.md",
+    "template/네트워크 강의 템플릿.md",
+    "template",
     "code/echoserver.cpp",
     "code",
-    "첨부파일/Pasted image 20230822182617.png",
+    "0. Map_Of_Contents/프로그래밍 MOC.md",
+    "0. Map_Of_Contents/0_MOC Home.md",
+    "0. Map_Of_Contents",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/Untitled.md",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/3. TCP 에코 서비스 전체 흐름.md",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/1. 소켓의 본질에 대한 이해.md",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/2. TCP 상태, 적절한 상태 전이.md",
-    "첨부파일/Pasted image 20230822170613.png",
-    "첨부파일/Pasted image 20230822164747.png",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/0. 소켓 프로그래밍 수업 목표.md",
-    "template/네트워크 강의 템플릿.md",
-    "첨부파일/Pasted image 20230822155602.png",
     "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/2. Host란 무엇인가.md",
     "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-5. TCP '연결'.md",
     "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-4. TCP 헤더 형식.md",
@@ -226,20 +215,8 @@
     "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5. L3 수준에서 외워야할 것.md",
     "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-10. Ping과 RTT.md",
     "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-9. ARP.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-8. DHCP.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-7. 인터넷이란.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-6. Subnet Mask.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-5. IPv4 헤더 형식.md",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!",
-    "첨부파일/Pasted image 20230820210953.png",
-    "첨부파일/Pasted image 20230820204509.png",
-    "첨부파일/Pasted image 20230820203124.png",
-    "첨부파일/Pasted image 20230820203013.png",
-    "첨부파일/Pasted image 20230820200939.png",
     "Untitled.canvas",
-    "template",
-    "1. 임시메모",
-    "0. Map_Of_Contents",
-    "TCP"
+    "1. 임시메모"
   ]
 }

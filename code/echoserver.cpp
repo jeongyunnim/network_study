@@ -1,11 +1,13 @@
 #include <iostream>
 #include <cstdlib>
+#include <cstring>
 #include <unistd.h>
 /* win32 대체 */
+#include <arpa/inet.h>
 #include <netinet/in.h>
 #include <sys/socket.h>
 
-int main(int argc, std::string argv[])
+int main(void)
 {
 	//1. 접속대기 소켓 생성 hSocket == socket handle
 	int hSocket = ::socket(AF_INET, SOCK_STREAM, 0);
@@ -14,9 +16,13 @@ int main(int argc, std::string argv[])
 		[2] SOCK_STREAM -> 이 소켓에서의 데이터 단위가 stream이다. == L4가 TCP 이다.
 		[3] 이 2가지 정보로 이미 TCP/IP 프로토콜이라는 것을 알았기 때문에 0을 준다.
 	*/
-
+	if (hSocket == -1)
+	{
+		std::cout << "Error: socket." << std::endl;
+		return (1);
+	}
 	//2. 포트 바인딩
-	sockaddr_in svraddr = {0};
+	sockaddr_in svraddr;
 	svraddr.sin_family = AF_INET;
 	/*
 	 * htons(), htonl()
@@ -38,7 +44,7 @@ int main(int argc, std::string argv[])
 	if (::bind(hSocket, (sockaddr*)&svraddr, sizeof(svraddr)) == SO_ERROR)
 	{
 		std::cout << "Error: 소켓에 IP주소와 port를 바인드할 수 없음." << std::endl;
-		return (0);
+		return (1);
 	}
 
 	//3. 접속대기 상태로 전환
@@ -53,8 +59,41 @@ int main(int argc, std::string argv[])
 	if (::listen(hSocket, SOMAXCONN) == SO_ERROR)
 	{
 		std::cout << "Error: listen." << std::endl;
-		return (0);
+		return (1);
 	}
+	/*====================================================================*/
 
+	//4. 클라이언트 접속 처리 및 대응
+	/**
+	 * 클라이언트와 통신할 서버 통신 소켓을 여는 과정.
+	 */
+	sockaddr_in clientaddr = { 0 };
+	socklen_t nAddrLen = sizeof(clientaddr);
+	int hClient = 0;
+	char szBuffer[128] = { 0 };
+	int nReceive = 0;
+
+	//4.1 클라이언트 연결을 받아들이고 새로운 소켓 생성(개방)
+	while ((hClient = ::accept(hSocket, (sockaddr*)&clientaddr, &nAddrLen)) != -1)
+	{
+		std::cout << "새 클라이언트 생성" << std::endl;
+		//4.2 클라이언트로부터 문자열을 수신
+		/**
+		 * @brief Construct a new while object
+		 * 동기모드로 wait이 걸려있다가 데이터가 수신이 되면 반환을 하게된다.
+		 * 클라이언트가 연결을 끊을 때, 소켓이 닫히고, recv가 최종적으로 0을 반환하려 해당 반복문을 빠져나온다.
+		 */
+		while ((nReceive = ::recv(hClient, szBuffer, sizeof(szBuffer), 0)) != -1)
+		{
+			//4.3 수신한 문자열을 그대로 반향전송
+			::send(hClient, szBuffer, sizeof(szBuffer), 0);
+			std::cout << szBuffer << std::endl;
+			memset(szBuffer, 0, sizeof(szBuffer));
+		}
+		//4.4 클라이언트가 연결을 종료
+		shutdown(hClient, SHUT_RDWR);
+		close(hClient);
+	}
+	close(hSocket);
 	return (0);
 }
