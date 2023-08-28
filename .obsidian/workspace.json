@@ -4,45 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "a0ffed2a27c263b6",
+        "id": "f9662214fa4dd590",
         "type": "tabs",
         "children": [
           {
-            "id": "f4d66212d717171d",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6. Archive/HTTP 완벽 가이드/1부 HTTP, 웹의 기초.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "fdb759bbd1bb4f6f",
+            "id": "d121d041d1b9e74b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6. Archive/HTTP 완벽 가이드/1-3-2 메시지의 문법-시작줄.md",
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter03 주소체계와 데이터 정렬.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "80ff52d7284533bb",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -71,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#프로그래밍/네트워크",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -92,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "a3a2d8397bcd1274",
@@ -109,13 +85,14 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter03 주소체계와 데이터 정렬.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -125,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter03 주소체계와 데이터 정렬.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,74 +124,76 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter03 주소체계와 데이터 정렬.md"
+              }
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 232.5,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:퀵 스위처 열기": false,
-      "graph:그래프 뷰 열기": false,
-      "canvas:새 캔버스 만들기": false,
-      "daily-notes:오늘의 데일리 노트 열기": false,
-      "templates:템플릿 삽입": false,
-      "command-palette:명령어 팔레트 열기": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "80ff52d7284533bb",
+  "active": "d121d041d1b9e74b",
   "lastOpenFiles": [
-    "6. Archive/HTTP 완벽 가이드/헤더의 헤더.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/0. 윤성우의 열혈 TCP IP 소켓 프로그래밍.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter03 주소체계와 데이터 정렬.md",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/2. TCP 상태, 적절한 상태 전이.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter02 소켓의 타입과 프로토콜의 설정.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/2-3 프로토콜의 최종 선택.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/2-2 소켓의 타입.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/2-1 프로토콜 체계.md",
+    "6. Archive/HTTP 완벽 가이드/1-1-5 프로토콜 버전.md",
+    "6. Archive/HTTP 완벽 가이드/1-1 HTTP 개관.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter01 네트워크 프로그래밍과 소켓의 이해.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/1-3 윈도우 기반 입출력 함수.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/1-2 윈도우 기반 소켓 관련 함수.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/1-1 윈도우 소켓 프로그래밍.md",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/1. 소켓의 본질에 대한 이해.md",
+    "template/윤성우의 열혈 TCP IP 소켓 프로그래밍 템플릿.md",
+    "template/네트워크 강의 템플릿.md",
+    "template/HTTP 완벽 가이드 템플릿.md",
+    "Excalidraw/Drawing 2023-08-28 16.46.23.excalidraw.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter14 멀티캐스트 & 브로드 캐스트.md",
+    "6. Archive/HTTP 완벽 가이드/0. HTTP 완벽 가이드.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍",
+    "6. Archive/HTTP 완벽 가이드/Untitled.md",
+    "Excalidraw",
+    "0. Map_Of_Contents/프로그래밍.Network MOC.md",
+    "6. Archive/HTTP 완벽 가이드/1-2-1 URL 문법.md",
     "6. Archive/HTTP 완벽 가이드/1-3-2 메시지의 문법-헤더.md",
     "6. Archive/HTTP 완벽 가이드/1-3-2 메시지의 문법.md",
-    "6. Archive/HTTP 완벽 가이드/1-3-2 메시지의 문법-시작줄.md",
-    "6. Archive/HTTP 완벽 가이드/1-3 HTTP 메시지.md",
-    "6. Archive/HTTP 완벽 가이드/1-3-1 메시지의 구성.md",
-    "6. Archive/HTTP 완벽 가이드/1부 HTTP, 웹의 기초.md",
+    "6. Archive/HTTP 완벽 가이드/1-2-2 스킴의 포맷.md",
+    "첨부파일/Pasted image 20230828161055.png",
+    "Untitled.canvas",
     "첨부파일/Pasted image 20230826145829.png",
     "첨부파일/Pasted image 20230826144732.png",
     "첨부파일/Pasted image 20230825141628.png",
     "첨부파일/Pasted image 20230825141516.png",
     "첨부파일/Pasted image 20230825141513.png",
-    "6. Archive/HTTP 완벽 가이드/1-2-2 스킴의 포맷.md",
-    "6. Archive/HTTP 완벽 가이드/1-2 URL과 리소스.md",
-    "6. Archive/HTTP 완벽 가이드/1-2-1 URL 문법.md",
     "첨부파일/Pasted image 20230825134242.png",
     "첨부파일/Pasted image 20230825134115.png",
     "첨부파일/Pasted image 20230825133924.png",
     "첨부파일/Pasted image 20230825113710.png",
-    "6. Archive/HTTP 완벽 가이드/1-1-5 프로토콜 버전.md",
-    "6. Archive/HTTP 완벽 가이드/1-1-1 리소스.md",
-    "6. Archive/HTTP 완벽 가이드/1-1 HTTP 개관.md",
-    "6. Archive/HTTP 완벽 가이드/1-1-6 웹의 구성 요소.md",
-    "첨부파일/Pasted image 20230824181513.png",
-    "6. Archive/HTTP 완벽 가이드/1-1-4 TCP 커넥션.md",
-    "6. Archive/HTTP 완벽 가이드/1-1-3 메시지.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/웹 서비스 기본 구조.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/네트워크 장애 분류.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/WAS.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/URL과 URI.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/8. Web을 이루는 핵심기술.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/7. DNS.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6. L4 수준에서 외워야할 것.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-5. TCP '연결'.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-4. TCP 헤더 형식.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-3. TCP 연결 종료 과정.md",
-    "6. Archive/HTTP 완벽 가이드",
-    "code/client",
-    "code/echoClient.cpp",
-    "code/echoClient",
     "code/server",
-    "template",
     "code/echoserver.cpp",
+    "code/echoClient.cpp",
+    "code/client",
     "code",
-    "0. Map_Of_Contents",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!",
-    "Untitled.canvas"
+    "6. Archive/HTTP 완벽 가이드"
   ]
 }
