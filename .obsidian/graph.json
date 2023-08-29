@@ -1,7 +1,7 @@
 {
-  "collapse-filter": true,
-  "search": "",
-  "showTags": false,
+  "collapse-filter": false,
+  "search": "IP",
+  "showTags": true,
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
@@ -13,10 +13,10 @@
   "nodeSizeMultiplier": 1.12561848958333,
   "lineSizeMultiplier": 2.45908203125,
   "collapse-forces": false,
-  "centerStrength": 0.518713248970312,
+  "centerStrength": 0.541585286458333,
   "repelStrength": 10,
-  "linkStrength": 1,
-  "linkDistance": 30,
-  "scale": 1.2585995970363053,
+  "linkStrength": 0.8221435546875,
+  "linkDistance": 234,
+  "scale": 1.5783644958189769,
   "close": false
 }
