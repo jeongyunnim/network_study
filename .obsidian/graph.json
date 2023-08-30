@@ -1,7 +1,7 @@
 {
   "collapse-filter": false,
-  "search": "IP",
-  "showTags": true,
+  "search": "-path:template",
+  "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
@@ -13,10 +13,10 @@
   "nodeSizeMultiplier": 1.12561848958333,
   "lineSizeMultiplier": 2.45908203125,
   "collapse-forces": false,
-  "centerStrength": 0.541585286458333,
+  "centerStrength": 0.518713248970312,
   "repelStrength": 10,
-  "linkStrength": 0.8221435546875,
-  "linkDistance": 234,
-  "scale": 1.5783644958189769,
-  "close": false
+  "linkStrength": 1,
+  "linkDistance": 30,
+  "scale": 1.9010343237258744,
+  "close": true
 }
