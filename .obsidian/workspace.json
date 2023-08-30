@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/4-1 연결 대기 상태.md",
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter04 TCP 기반 서버와 클라이언트 1.md",
                 "mode": "source",
                 "source": false
               }
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/4-1 연결 대기 상태.md",
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter04 TCP 기반 서버와 클라이언트 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/4-1 연결 대기 상태.md",
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter04 TCP 기반 서버와 클라이언트 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/4-1 연결 대기 상태.md"
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter04 TCP 기반 서버와 클라이언트 1.md"
               }
             }
           }
@@ -149,7 +149,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 332.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -164,6 +165,7 @@
   },
   "active": "2af10a4d9abcc47e",
   "lastOpenFiles": [
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/4-1 연결 대기 상태.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter04 TCP 기반 서버와 클라이언트 1.md",
     "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5. L3 수준에서 외워야할 것.md",
     "template/네트워크 강의 템플릿.md",
@@ -179,7 +181,6 @@
     "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/3. Switch는 무엇인가.md",
     "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/2. Host란 무엇인가.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/3-1 주소 정보의 표현.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/4-1 연결 대기 상태.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/3-3 인터넷 주소의 초기화와 할당.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/3-2 네트워크 바이트 순서, 인터넷 주소 변환.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter03 주소체계와 데이터 정렬.md",
