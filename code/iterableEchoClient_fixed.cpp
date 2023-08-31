@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdio>
 #include <cstdlib>
 #include <cstring>
 #include <unistd.h>
@@ -6,7 +7,7 @@
 // #include <netinet/in.h>
 #include <sys/socket.h>
 
-#define BUF_SIZE 1024
+#define BUF_SIZE 100
 
 int main(int argc, char *argv[])
 {
@@ -39,12 +40,11 @@ int main(int argc, char *argv[])
         std::cout << "connected" << std::endl;
 	while (1)
 	{
-        std::cin >> message;
-        if (message[0] == 'Q' && message[1] == '\0')
+		std::cin >> message;
+        if (strcmp(message, "q") == 0)
             break ;
         strLen = write(sock, message, sizeof(message)); // 이 부분부터 변경
-        memset(&message, 0, sizeof(message));
-		receiveCount = 0;
+		receiveLen = 0;
 		while (receiveLen < strLen)
 		{
 			receiveCount = read(sock, &message[receiveLen], BUF_SIZE - 1);
@@ -53,9 +53,9 @@ int main(int argc, char *argv[])
 				std::cerr << "read() error" << std::endl;
 				return (1);
 			}
-			receiveCount+=receiveCount;
+			receiveLen += receiveCount;
 		}
-		message[strLen] = '\0';
+		message[receiveLen] = '\0';
 		std::cout << "massage from server: " << message << std::endl;
 	}
 	close(sock);

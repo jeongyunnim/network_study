@@ -55,8 +55,8 @@ int main(void)
 	 * 		서버가 listen에서 accept되고 서버 통신 소켓을 오픈하기 까지의 순간 동시에 connect 하려는 클라이언트의 요청이 무시되는 문제가 있었음.
 	 * 		backlog queue -> 현재는 OS 레벨에서 모두 처리해준다(SOMAXCONN: 대기열의 최대 연결 요청 수 설정)
 	 */
-	if (::listen(hSocket, SOMAXCONN) == SO_ERROR)
 	{
+	if (::listen(hSocket, SOMAXCONN) == SO_ERROR)
 		std::cout << "Error: listen." << std::endl;
 		return (1);
 	}

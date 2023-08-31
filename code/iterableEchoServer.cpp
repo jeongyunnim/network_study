@@ -45,8 +45,7 @@ int main(int argc, char *argv[])
 	clientAddrSize = sizeof(clientSocket); // 이 부분 이해 제대로
 	for (int i = 0; i < 5; i++)
 	{
-		std::cout << "wait... client... " << std::endl;
-		memset(&message, 0, sizeof(message));
+		std::cout << "wait client... " << std::endl;
 		clientSocket = accept(serverSocket, reinterpret_cast<struct sockaddr *>(&clientAddr), &clientAddrSize);
 		if (clientSocket == -1)
 		{
