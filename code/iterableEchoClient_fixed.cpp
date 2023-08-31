@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	int     sock;
 	char    message[BUF_SIZE] = {0};
-	int     strLen;
+	int     strLen, receiveLen, receiveCount;
 	struct sockaddr_in  serverAddr;
 
 	if (argc != 2)
@@ -42,11 +42,21 @@ int main(int argc, char *argv[])
         std::cin >> message;
         if (message[0] == 'Q' && message[1] == '\0')
             break ;
-        write(sock, message, sizeof(message));
+        strLen = write(sock, message, sizeof(message)); // 이 부분부터 변경
         memset(&message, 0, sizeof(message));
-        strLen = read(sock, message, BUF_SIZE - 1);
-        message[strLen] = '\0';
-        std::cout << "massage from server: " << message << std::endl;
+		receiveCount = 0;
+		while (receiveLen < strLen)
+		{
+			receiveCount = read(sock, &message[receiveLen], BUF_SIZE - 1);
+			if (receiveCount == -1)
+			{
+				std::cerr << "read() error" << std::endl;
+				return (1);
+			}
+			receiveCount+=receiveCount;
+		}
+		message[strLen] = '\0';
+		std::cout << "massage from server: " << message << std::endl;
 	}
 	close(sock);
 	return (0);

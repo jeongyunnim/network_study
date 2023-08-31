@@ -6,7 +6,7 @@
 // #include <netinet/in.h>
 #include <sys/socket.h>
 
-#define BUF_SIZE 1024
+#define BUF_SIZE 50
 
 int main(int argc, char *argv[])
 {
@@ -46,6 +46,7 @@ int main(int argc, char *argv[])
 	for (int i = 0; i < 5; i++)
 	{
 		std::cout << "wait... client... " << std::endl;
+		memset(&message, 0, sizeof(message));
 		clientSocket = accept(serverSocket, reinterpret_cast<struct sockaddr *>(&clientAddr), &clientAddrSize);
 		if (clientSocket == -1)
 		{
@@ -53,7 +54,7 @@ int main(int argc, char *argv[])
 			return (1);
 		}
 		else
-			std::cout << "connect client" << std::endl;
+			std::cout << "client connected" << std::endl;
 		while ((strLen = read(clientSocket, message, BUF_SIZE)) != 0)
 		{
 			std::cout << "massage from client: " << message << std::endl;
