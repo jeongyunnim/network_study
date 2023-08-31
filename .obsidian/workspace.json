@@ -4,22 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "9dc8b02d1569374c",
+        "id": "a0ffed2a27c263b6",
         "type": "tabs",
         "children": [
           {
-            "id": "8b356322bb359d47",
+            "id": "f4d66212d717171d",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6. Archive/HTTP 완벽 가이드/1부 HTTP, 웹의 기초.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "2af10a4d9abcc47e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/4-2 Iterative 기반 서버, 클라이언트.md",
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter04 TCP 기반 서버와 클라이언트 1.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/4-2 Iterative 기반 서버, 클라이언트.md",
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter04 TCP 기반 서버와 클라이언트 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/4-2 Iterative 기반 서버, 클라이언트.md",
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter04 TCP 기반 서버와 클라이언트 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/4-2 Iterative 기반 서버, 클라이언트.md"
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter04 TCP 기반 서버와 클라이언트 1.md"
               }
             }
           }
@@ -139,33 +154,36 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "switcher:퀵 스위처 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "8b356322bb359d47",
+  "active": "2af10a4d9abcc47e",
   "lastOpenFiles": [
-    "code/iterableEchoClient_fixed.cpp",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/웹서브.md",
-    "code/client",
-    "code/server",
-    "code/iterableEchoClient.cpp",
+    "code/client.dSYM/Contents/Resources/DWARF/client",
+    "code/client.dSYM/Contents/Resources/DWARF",
+    "code/client.dSYM/Contents/Resources",
+    "code/client.dSYM/Contents/Info.plist",
+    "code/client.dSYM/Contents",
+    "code/client.dSYM",
+    "code/a.out",
     "code/iterableEchoServer.cpp",
+    "code/iterableEchoClient_fixed.cpp",
+    "code/iterableEchoClient.cpp",
     "code/echoServerWithComment.cpp",
-    "code/echoClientWithComment.cpp",
-    "code/echoserverWithComment.cpp",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter04 TCP 기반 서버와 클라이언트 1.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter03 주소체계와 데이터 정렬.md",
-    "6. Archive/HTTP 완벽 가이드/1부 HTTP, 웹의 기초.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/웹서브.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/4-2 Iterative 기반 서버, 클라이언트.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/4-1 연결 대기 상태.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter04 TCP 기반 서버와 클라이언트 1.md",
     "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5. L3 수준에서 외워야할 것.md",
     "template/네트워크 강의 템플릿.md",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/0. 소켓 프로그래밍 수업 목표.md",
+    "6. Archive/HTTP 완벽 가이드/1부 HTTP, 웹의 기초.md",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/2. TCP 상태, 적절한 상태 전이.md",
     "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/0.외워서 끝내는 네트워크 핵심이론-기초.md",
     "0. Map_Of_Contents/프로그래밍.Network MOC.md",
@@ -178,14 +196,12 @@
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/3-1 주소 정보의 표현.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/3-3 인터넷 주소의 초기화와 할당.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/3-2 네트워크 바이트 순서, 인터넷 주소 변환.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter03 주소체계와 데이터 정렬.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter02 소켓의 타입과 프로토콜의 설정.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/2-1 프로토콜 체계.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/2-2 소켓의 타입.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/2-3 프로토콜의 최종 선택.md",
     "첨부파일/Pasted image 20230828161055.png",
-    "template",
-    "code/echoserver.cpp",
-    "code/echoClient.cpp",
     "첨부파일/Pasted image 20230826145829.png",
     "첨부파일/Pasted image 20230826144732.png",
     "첨부파일/Pasted image 20230825141628.png",

@@ -7,7 +7,7 @@
 // #include <netinet/in.h>
 #include <sys/socket.h>
 
-#define BUF_SIZE 100
+#define BUF_SIZE 1024
 
 int main(int argc, char *argv[])
 {
@@ -40,10 +40,10 @@ int main(int argc, char *argv[])
         std::cout << "connected" << std::endl;
 	while (1)
 	{
-		std::cin >> message;
+		std::cin >> message; // 버퍼가 있어야 함. 버퍼 사이즈 오버하면 안 들어감..
         if (strcmp(message, "q") == 0)
             break ;
-        strLen = write(sock, message, sizeof(message)); // 이 부분부터 변경
+        strLen = write(sock, message, strlen(message) + 1); // 이 부분부터 변경
 		receiveLen = 0;
 		while (receiveLen < strLen)
 		{
@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 			}
 			receiveLen += receiveCount;
 		}
-		message[receiveLen] = '\0';
+		message[receiveLen - 1] = '\0';
 		std::cout << "massage from server: " << message << std::endl;
 	}
 	close(sock);

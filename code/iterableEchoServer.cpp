@@ -57,6 +57,11 @@ int main(int argc, char *argv[])
 		while ((strLen = read(clientSocket, message, BUF_SIZE)) != 0)
 		{
 			std::cout << "massage from client: " << message << std::endl;
+			for (int i = 0; message[i] != '\0'; i++)
+			{
+				if ('a' <= message[i] && message[i] <= 'z')
+					message[i] -= 32;
+			}
 			write(clientSocket, message, strLen);
 		}
 		close(clientSocket);
