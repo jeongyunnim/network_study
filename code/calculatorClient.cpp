@@ -13,8 +13,8 @@ int main(int argc, char *argv[])
 {
 	int     sock;
 	char    message[BUF_SIZE] = {0};
-	int     strLen, receiveLen, receiveCount;
 	struct sockaddr_in  serverAddr;
+	int		argNum = 0;
 
 	if (argc != 2)
 	{
@@ -38,26 +38,42 @@ int main(int argc, char *argv[])
     }
     else
         std::cout << "connected" << std::endl;
-	while (1)
+	std::string temp;
+	std::cin >> temp;
+	for (std::string::iterator it = temp.begin(); it != temp.end(); it++)
 	{
-		std::cin >> message; // 버퍼가 있어야 함. 버퍼 사이즈 오버하면 안 들어감..
-        if (strcmp(message, "q") == 0)
-            break ;
-        strLen = write(sock, message, strlen(message) + 1); // 이 부분부터 변경
-		receiveLen = 0;
-		while (receiveLen < strLen)
+		if (std::isdigit(*it) == false)
 		{
-			receiveCount = read(sock, message, BUF_SIZE - 1);
-			if (receiveCount == -1)
-			{
-				std::cerr << "read() error" << std::endl;
-				return (1);
-			}
-			receiveLen += receiveCount;
-			std::cout << "massage from server: " << message << std::endl;
+			close(sock);
+			std::cout << "input Error" << std::endl;
+			return (1);
 		}
-		message[receiveLen - 1] = '\0';
 	}
+	argNum = atoi(temp.c_str());
+	for (int i = 0; i < argNum; i++)
+	{
+		std::cin >> message;
+	    write(sock, message, strlen(message));
+	}
+	std::cin >> message;
+	if (std::strcmp(message, "+") != 0 && std::strcmp(message, "-") != 0 && \
+		std::strcmp(message, "/") != 0 && std::strcmp(message, "*") != 0)
+	{
+		std::cout << "operator error" << std::endl;
+		close(sock);
+		return (1);
+	}
+	else
+	{
+		std::cout << "operator " << message << std::endl;
+	}
+	write(sock, message, strlen(message));
+	if (read(sock, message, BUF_SIZE - 1) == -1)
+	{
+		std::cerr << "read() error" << std::endl;
+		return (1);
+	}
+	std::cout << "result from server: " << message << std::endl;
 	close(sock);
 	return (0);
 }
