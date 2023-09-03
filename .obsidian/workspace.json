@@ -4,37 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "a0ffed2a27c263b6",
+        "id": "f4f9bd1f4b2de513",
         "type": "tabs",
         "children": [
           {
-            "id": "f4d66212d717171d",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6. Archive/HTTP 완벽 가이드/1부 HTTP, 웹의 기초.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "2af10a4d9abcc47e",
+            "id": "daba7d7b7114044d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter04 TCP 기반 서버와 클라이언트 1.md",
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter08 도메인 이름과 인터넷 주소.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -100,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter04 TCP 기반 서버와 클라이언트 1.md",
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter08 도메인 이름과 인터넷 주소.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter04 TCP 기반 서버와 클라이언트 1.md",
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter08 도메인 이름과 인터넷 주소.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter04 TCP 기반 서버와 클라이언트 1.md"
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter08 도메인 이름과 인터넷 주소.md"
               }
             }
           }
@@ -163,44 +148,46 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "2af10a4d9abcc47e",
+  "active": "daba7d7b7114044d",
   "lastOpenFiles": [
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/0. 윤성우의 열혈 TCP IP 소켓 프로그래밍.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter08 도메인 이름과 인터넷 주소.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/웹서브.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/5. Chapter07 소켓의 우아한 연결종료.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/4. Chapter04,05 TCP 기반 서버와 클라이언트.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/3. Chapter03 주소체계와 데이터 정렬.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/2. Chapter02 소켓의 타입과 프로토콜의 설정.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/1. Chapter01 네트워크 프로그래밍과 소켓의 이해.md",
+    "6. Archive/HTTP 완벽 가이드/1부 HTTP, 웹의 기초.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/7-1 TCP 기반의 Half-close.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/4-1 연결 대기 상태.md",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/3. TCP 에코 서비스 전체 흐름.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/4-3 TCP소켓의 입출력 버퍼.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/4-2 Iterative 기반 서버, 클라이언트.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter06 UDP 기반 서버와 클라이언트.md",
+    "첨부파일/Pasted image 20230903170207.png",
+    "첨부파일/Pasted image 20230903164515.png",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-1. TCP와 UDP 개요.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-2. TCP 연결 과정.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-9. ARP.md",
+    "code/calclient",
+    "code/calsever",
+    "code/calculatorClient.cpp",
+    "code/iterableEchoClient_fixed copy.cpp",
+    "code/calculatorServer.cpp",
+    "code/iterableEchoServer copy.cpp",
     "code/client.dSYM/Contents/Resources/DWARF/client",
     "code/client.dSYM/Contents/Resources/DWARF",
     "code/client.dSYM/Contents/Resources",
     "code/client.dSYM/Contents/Info.plist",
-    "code/client.dSYM/Contents",
-    "code/client.dSYM",
-    "code/a.out",
-    "code/iterableEchoServer.cpp",
-    "code/iterableEchoClient_fixed.cpp",
-    "code/iterableEchoClient.cpp",
-    "code/echoServerWithComment.cpp",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/웹서브.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/4-2 Iterative 기반 서버, 클라이언트.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/4-1 연결 대기 상태.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter04 TCP 기반 서버와 클라이언트 1.md",
     "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5. L3 수준에서 외워야할 것.md",
     "template/네트워크 강의 템플릿.md",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/0. 소켓 프로그래밍 수업 목표.md",
-    "6. Archive/HTTP 완벽 가이드/1부 HTTP, 웹의 기초.md",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/2. TCP 상태, 적절한 상태 전이.md",
     "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/0.외워서 끝내는 네트워크 핵심이론-기초.md",
     "0. Map_Of_Contents/프로그래밍.Network MOC.md",
     "0. Map_Of_Contents/프로그래밍 MOC.md",
     "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/1. OSI 7Layer.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-2. L3 IP Packet.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-4. TCP IP.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/3. Switch는 무엇인가.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/2. Host란 무엇인가.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/3-1 주소 정보의 표현.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/3-3 인터넷 주소의 초기화와 할당.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/3-2 네트워크 바이트 순서, 인터넷 주소 변환.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter03 주소체계와 데이터 정렬.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter02 소켓의 타입과 프로토콜의 설정.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/2-1 프로토콜 체계.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/2-2 소켓의 타입.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/2-3 프로토콜의 최종 선택.md",
     "첨부파일/Pasted image 20230828161055.png",
     "첨부파일/Pasted image 20230826145829.png",
     "첨부파일/Pasted image 20230826144732.png",
@@ -209,8 +196,6 @@
     "첨부파일/Pasted image 20230825141513.png",
     "첨부파일/Pasted image 20230825134242.png",
     "첨부파일/Pasted image 20230825134115.png",
-    "첨부파일/Pasted image 20230825133924.png",
-    "첨부파일/Pasted image 20230825113710.png",
     "Untitled.canvas"
   ]
 }
