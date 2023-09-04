@@ -139,17 +139,18 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-excalidraw-plugin:Create new drawing": false,
-      "switcher:퀵 스위처 열기": false,
-      "graph:그래프 뷰 열기": false,
-      "canvas:새 캔버스 만들기": false,
-      "daily-notes:오늘의 데일리 노트 열기": false,
-      "templates:템플릿 삽입": false,
-      "command-palette:명령어 팔레트 열기": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
   "active": "daba7d7b7114044d",
   "lastOpenFiles": [
+    "첨부파일/Pasted image 20230904161329.png",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/0. 윤성우의 열혈 TCP IP 소켓 프로그래밍.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter08 도메인 이름과 인터넷 주소.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/웹서브.md",
@@ -187,7 +188,6 @@
     "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/0.외워서 끝내는 네트워크 핵심이론-기초.md",
     "0. Map_Of_Contents/프로그래밍.Network MOC.md",
     "0. Map_Of_Contents/프로그래밍 MOC.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/1. OSI 7Layer.md",
     "첨부파일/Pasted image 20230828161055.png",
     "첨부파일/Pasted image 20230826145829.png",
     "첨부파일/Pasted image 20230826144732.png",
