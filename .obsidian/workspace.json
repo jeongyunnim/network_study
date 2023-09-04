@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f4f9bd1f4b2de513",
+        "id": "5951387e0254f8a5",
         "type": "tabs",
         "children": [
           {
-            "id": "daba7d7b7114044d",
+            "id": "38f223be50180646",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter08 도메인 이름과 인터넷 주소.md",
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/6. Chapter08 도메인 이름과 인터넷 주소.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter08 도메인 이름과 인터넷 주소.md",
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/6. Chapter08 도메인 이름과 인터넷 주소.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter08 도메인 이름과 인터넷 주소.md",
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/6. Chapter08 도메인 이름과 인터넷 주소.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter08 도메인 이름과 인터넷 주소.md"
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/6. Chapter08 도메인 이름과 인터넷 주소.md"
               }
             }
           }
@@ -148,13 +148,16 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "daba7d7b7114044d",
+  "active": "38f223be50180646",
   "lastOpenFiles": [
+    "Excalidraw/Drawing 2023-08-28 16.46.23.excalidraw.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/6. Chapter08 도메인 이름과 인터넷 주소.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/5. Chapter07 소켓의 우아한 연결종료.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/1. OSI 7Layer.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/0.외워서 끝내는 네트워크 핵심이론-기초.md",
     "첨부파일/Pasted image 20230904161329.png",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/0. 윤성우의 열혈 TCP IP 소켓 프로그래밍.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter08 도메인 이름과 인터넷 주소.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/웹서브.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/5. Chapter07 소켓의 우아한 연결종료.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/4. Chapter04,05 TCP 기반 서버와 클라이언트.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/3. Chapter03 주소체계와 데이터 정렬.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/2. Chapter02 소켓의 타입과 프로토콜의 설정.md",
@@ -185,9 +188,7 @@
     "template/네트워크 강의 템플릿.md",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/0. 소켓 프로그래밍 수업 목표.md",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/2. TCP 상태, 적절한 상태 전이.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/0.외워서 끝내는 네트워크 핵심이론-기초.md",
     "0. Map_Of_Contents/프로그래밍.Network MOC.md",
-    "0. Map_Of_Contents/프로그래밍 MOC.md",
     "첨부파일/Pasted image 20230828161055.png",
     "첨부파일/Pasted image 20230826145829.png",
     "첨부파일/Pasted image 20230826144732.png",
@@ -195,7 +196,6 @@
     "첨부파일/Pasted image 20230825141516.png",
     "첨부파일/Pasted image 20230825141513.png",
     "첨부파일/Pasted image 20230825134242.png",
-    "첨부파일/Pasted image 20230825134115.png",
     "Untitled.canvas"
   ]
 }
