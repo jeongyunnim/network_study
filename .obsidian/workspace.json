@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter08 도메인 이름과 인터넷 주소.md",
+                "file": "0. Map_Of_Contents/프로그래밍.Network MOC.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter08 도메인 이름과 인터넷 주소.md",
+                "file": "0. Map_Of_Contents/프로그래밍.Network MOC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter08 도메인 이름과 인터넷 주소.md",
+                "file": "0. Map_Of_Contents/프로그래밍.Network MOC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter08 도메인 이름과 인터넷 주소.md"
+                "file": "0. Map_Of_Contents/프로그래밍.Network MOC.md"
               }
             }
           }
@@ -150,8 +150,8 @@
   },
   "active": "daba7d7b7114044d",
   "lastOpenFiles": [
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/0. 윤성우의 열혈 TCP IP 소켓 프로그래밍.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter08 도메인 이름과 인터넷 주소.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/0. 윤성우의 열혈 TCP IP 소켓 프로그래밍.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/웹서브.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/5. Chapter07 소켓의 우아한 연결종료.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/4. Chapter04,05 TCP 기반 서버와 클라이언트.md",
