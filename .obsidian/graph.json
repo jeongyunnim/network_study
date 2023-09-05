@@ -1,12 +1,20 @@
 {
   "collapse-filter": false,
-  "search": "-path:template",
+  "search": "-path:template -path:template  -path:\"0. Map_Of_Contents\"",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": true,
-  "colorGroups": [],
+  "colorGroups": [
+    {
+      "query": "tag:#프로그래밍/네트워크  ",
+      "color": {
+        "a": 1,
+        "rgb": 7462994
+      }
+    }
+  ],
   "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": 0,
@@ -17,6 +25,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 2.107058474990527,
+  "scale": 5.091363954571552,
   "close": true
 }
