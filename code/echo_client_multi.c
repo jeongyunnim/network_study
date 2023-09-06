@@ -40,14 +40,14 @@ int main(int argc, char *argv[])
 		fputs("Input message(Q to quit): ", stdout);
 		fgets(message, BUF_SIZE, stdin);
 		if (strcmp(message, "Q\n") == 0)
-			break ;
+			exit (123);
 
 		str_len = write(sock, message, strlen(message));
 		recv_len = 0;
 		while (recv_len < str_len)
 		{
 			recv_len = read(sock, &message[recv_len], BUF_SIZE - 1);
-			if (recv_cnt == -1)
+			if (recv_len == -1)
 				error_handling("read() error");
 			recv_len += recv_cnt;
 		}

@@ -6,7 +6,13 @@
 #include <sys/socket.h>
 #include <sys/time.h>
 #include <sys/select.h>
+#include <signal.h>
 #define BUF_SIZE 100
+
+void signal_handler(int signo)
+{
+	exit (123);
+}
 
 int main(int argc, char *argv[])
 {
@@ -15,6 +21,7 @@ int main(int argc, char *argv[])
 	struct timeval timeout;
 	fd_set reads, cpy_reads;
 
+	signal(SIGINT, signal_handler);
 	socklen_t adr_size;
 	int fd_max, str_len, fd_num, i;
 	char buf[BUF_SIZE];
@@ -35,7 +42,7 @@ int main(int argc, char *argv[])
 		printf("bind() error\n");
 		exit(1);
 	}
-	if (listen(serv_sock, 5) == -1)
+	if (listen(serv_sock, 3) == -1)
 	{
 		printf("listen() error\n");
 		exit(1);
@@ -46,12 +53,16 @@ int main(int argc, char *argv[])
 	}
 	FD_ZERO(&reads);
 	FD_SET(serv_sock, &reads);
-	fd_max = serv_sock; // 왜 serv_sock으로 초기화 하는가?
+	/**
+	 * fd_max를 서버 소켓으로 초기화 하는 이유
+	 * 
+	 */
+	fd_max = serv_sock;
 
 	while (1)
 	{
 		cpy_reads = reads;
-		timeout.tv_sec = 60;
+		timeout.tv_sec = 5;
 		timeout.tv_usec = 5000;
 
 		if ((fd_num = select(fd_max + 1, &cpy_reads, 0, 0, &timeout)) == -1)
@@ -83,8 +94,8 @@ int main(int argc, char *argv[])
 					else
 					{
 						write(i, buf, str_len);
+						write(i, buf, str_len);
 						write(1, buf, str_len);
-
 					}
 				}
 			}
