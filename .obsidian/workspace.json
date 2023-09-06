@@ -1,26 +1,18 @@
 {
   "main": {
-    "id": "d85ef4d9d70591bd",
+    "id": "b7a9d69e7df41faf",
     "type": "split",
     "children": [
       {
-        "id": "2826efae522fdbfb",
+        "id": "b191730c23b90180",
         "type": "tabs",
         "children": [
           {
-            "id": "890c7512291995a9",
+            "id": "8c913f68b88b8d03",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-<<<<<<< HEAD
-                "file": "0. Map_Of_Contents/프로그래밍.Network MOC.md",
-=======
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/9. Chapter12 IO 멀티 플렉싱.md",
->>>>>>> 8a166414742b8685d74bfae8f0b6df25fce86055
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -29,15 +21,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "483b5b0c14d19851",
+    "id": "39186eb7c55dd7a6",
     "type": "split",
     "children": [
       {
-        "id": "0b94ca8d690a0f5f",
+        "id": "322618334c72de6a",
         "type": "tabs",
         "children": [
           {
-            "id": "b86c7bd707878197",
+            "id": "b524bab65096d4bc",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -47,12 +39,12 @@
             }
           },
           {
-            "id": "663a69b8832b6e25",
+            "id": "cea0495c422a1dc8",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#프로그래밍/네트워크",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -62,7 +54,7 @@
             }
           },
           {
-            "id": "3e9559ecf71ee7a2",
+            "id": "9489eff4c50a79b4",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -73,27 +65,22 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300
   },
   "right": {
-    "id": "a3a2d8397bcd1274",
+    "id": "143474f9aea33508",
     "type": "split",
     "children": [
       {
-        "id": "a4389d9fbb260286",
+        "id": "90ad81070159050d",
         "type": "tabs",
         "children": [
           {
-            "id": "b29101c8d75604e3",
+            "id": "f2b3641af9aa5bf2",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-<<<<<<< HEAD
-                "file": "0. Map_Of_Contents/프로그래밍.Network MOC.md",
-=======
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/9. Chapter12 IO 멀티 플렉싱.md",
->>>>>>> 8a166414742b8685d74bfae8f0b6df25fce86055
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,23 +92,18 @@
             }
           },
           {
-            "id": "cda969f808018576",
+            "id": "0e58bacf12a2f4a7",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-<<<<<<< HEAD
-                "file": "0. Map_Of_Contents/프로그래밍.Network MOC.md",
-=======
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/9. Chapter12 IO 멀티 플렉싱.md",
->>>>>>> 8a166414742b8685d74bfae8f0b6df25fce86055
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "7a6ecfc7e0c2ced1",
+            "id": "59cb812c6562468b",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -132,90 +114,31 @@
             }
           },
           {
-            "id": "76c171cb6b3a2de9",
+            "id": "e073e196cf36c0cc",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-<<<<<<< HEAD
-                "file": "0. Map_Of_Contents/프로그래밍.Network MOC.md"
-=======
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/9. Chapter12 IO 멀티 플렉싱.md"
->>>>>>> 8a166414742b8685d74bfae8f0b6df25fce86055
-              }
+              "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
+    "width": 300,
     "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "switcher:퀵 스위처 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "890c7512291995a9",
-  "lastOpenFiles": [
-<<<<<<< HEAD
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/Chapter08 도메인 이름과 인터넷 주소.md",
-=======
-    "0. Map_Of_Contents/프로그래밍.Network MOC.md",
-    "0. Map_Of_Contents/프로그래밍 MOC.md",
-    "0. Map_Of_Contents/0_MOC Home.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/9. Chapter12 IO 멀티 플렉싱.md",
-    "첨부파일/Pasted image 20230905205349.png",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/2023-09-05.md",
->>>>>>> 8a166414742b8685d74bfae8f0b6df25fce86055
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/0. 윤성우의 열혈 TCP IP 소켓 프로그래밍.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/웹서브.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/8. Chapter10 멀티프로세스 기반의 서버 구현.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/8-1 프로세스 기반의 다중접속 서버.md",
-    "첨부파일/Pasted image 20230905200627.png",
-    "첨부파일/Pasted image 20230905200315.png",
-    "첨부파일/Pasted image 20230905195840.png",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/7-2 L4수준 소켓 옵션.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/7. Chapter09 소켓의 다양한 옵션.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/7-1 L5수준 소켓 옵션.md",
-    "첨부파일/Pasted image 20230905164256.png",
-    "첨부파일/Pasted image 20230905162947.png",
-    "첨부파일/Pasted image 20230905161209.png",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/6. Chapter08 도메인 이름과 인터넷 주소.md",
-    "template/HTTP 완벽 가이드 템플릿.md",
-    "template/네트워크 강의 템플릿.md",
-    "template/윤성우의 열혈 TCP IP 소켓 프로그래밍 템플릿.md",
-    "첨부파일/Pasted image 20230816162408.png",
-    "첨부파일/Pasted image 20230816161044.png",
-    "첨부파일/Pasted image 20230816145136.png",
-    "첨부파일/Drawing 2023-07-23 17.10.10.excalidraw.md",
-    "Excalidraw/Drawing 2023-08-28 16.46.23.excalidraw.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/5. Chapter07 소켓의 우아한 연결종료.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/1. OSI 7Layer.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/0.외워서 끝내는 네트워크 핵심이론-기초.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/4. Chapter04,05 TCP 기반 서버와 클라이언트.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/3. Chapter03 주소체계와 데이터 정렬.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/2. Chapter02 소켓의 타입과 프로토콜의 설정.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/1. Chapter01 네트워크 프로그래밍과 소켓의 이해.md",
-    "6. Archive/HTTP 완벽 가이드/1부 HTTP, 웹의 기초.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/code/calclient",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/code/calsever",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/code/calculatorClient.cpp",
-    "code/iterableEchoClient_fixed copy.cpp",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/code/calculatorServer.cpp",
-    "code/iterableEchoServer copy.cpp",
-    "code/client.dSYM/Contents/Resources/DWARF/client",
-    "code/client.dSYM/Contents/Resources/DWARF",
-    "code/client.dSYM/Contents/Resources",
-    "code/client.dSYM/Contents/Info.plist",
-    "Untitled.canvas"
-  ]
+  "active": "8c913f68b88b8d03",
+  "lastOpenFiles": []
 }
