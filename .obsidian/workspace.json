@@ -1,30 +1,18 @@
 {
   "main": {
-    "id": "b7a9d69e7df41faf",
+    "id": "028a79070b97c50c",
     "type": "split",
     "children": [
       {
-<<<<<<< HEAD
-        "id": "b191730c23b90180",
+        "id": "0f77d404d13f2425",
         "type": "tabs",
         "children": [
           {
-            "id": "8c913f68b88b8d03",
-=======
-        "id": "5951387e0254f8a5",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "38f223be50180646",
->>>>>>> 491326e7f4caba026e757b215d8b57da6f93226d
+            "id": "326da56292f0b520",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/10. Chapter13 다양한 입출력 함수들.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -33,15 +21,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "39186eb7c55dd7a6",
+    "id": "1edd2a8bd0f323c7",
     "type": "split",
     "children": [
       {
-        "id": "322618334c72de6a",
+        "id": "8f4a2a5d8589f497",
         "type": "tabs",
         "children": [
           {
-            "id": "b524bab65096d4bc",
+            "id": "a07d6d0ccdc5b050",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -51,16 +39,12 @@
             }
           },
           {
-            "id": "cea0495c422a1dc8",
+            "id": "02bae5751547ff86",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-<<<<<<< HEAD
                 "query": "",
-=======
-                "query": "4way",
->>>>>>> 491326e7f4caba026e757b215d8b57da6f93226d
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -70,7 +54,7 @@
             }
           },
           {
-            "id": "9489eff4c50a79b4",
+            "id": "27818a2f6469509d",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -84,20 +68,19 @@
     "width": 300
   },
   "right": {
-    "id": "143474f9aea33508",
+    "id": "7706de9555186884",
     "type": "split",
     "children": [
       {
-        "id": "90ad81070159050d",
+        "id": "e4668f7e1813629b",
         "type": "tabs",
         "children": [
           {
-            "id": "f2b3641af9aa5bf2",
+            "id": "a3306a110f5c8ce6",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/10. Chapter13 다양한 입출력 함수들.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,19 +92,18 @@
             }
           },
           {
-            "id": "0e58bacf12a2f4a7",
+            "id": "ef0e9b60fe64cf61",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/10. Chapter13 다양한 입출력 함수들.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "59cb812c6562468b",
+            "id": "d2e10f144fe64ca2",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -132,13 +114,11 @@
             }
           },
           {
-            "id": "e073e196cf36c0cc",
+            "id": "12a60c940d5d4668",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/10. Chapter13 다양한 입출력 함수들.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -150,78 +130,20 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-excalidraw-plugin:Create new drawing": false,
-      "switcher:퀵 스위처 열기": false,
-      "graph:그래프 뷰 열기": false,
-      "canvas:새 캔버스 만들기": false,
-      "daily-notes:오늘의 데일리 노트 열기": false,
-      "templates:템플릿 삽입": false,
-      "command-palette:명령어 팔레트 열기": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-<<<<<<< HEAD
-  "active": "8c913f68b88b8d03",
+  "active": "326da56292f0b520",
   "lastOpenFiles": [
-    "code/server",
-    "code/client",
-    "code/calsever",
-    "code/calclient",
-    "code/a.out",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/2023-09-05.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/9. Chapter12 IO 멀티 플렉싱.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/10. Chapter13 다양한 입출력 함수들.md",
-    "code/echo_client_multi.c",
-    "code/Makefile"
-=======
-  "active": "38f223be50180646",
-  "lastOpenFiles": [
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/1. OSI 7Layer.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-1. IP주소.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-2. L3 IP Packet.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-7. 인터넷이란.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5. L3 수준에서 외워야할 것.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-9. ARP.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-8. DHCP.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-6. Subnet Mask.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-5. IPv4 헤더 형식.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-4. TCP IP.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/0.외워서 끝내는 네트워크 핵심이론-기초.md",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/0. 소켓 프로그래밍 수업 목표.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/0. 윤성우의 열혈 TCP IP 소켓 프로그래밍.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/10. Chapter13 다양한 입출력 함수들.md",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/1. 소켓의 본질에 대한 이해.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/네트워크 장애 분류.md",
-    "0. Map_Of_Contents/프로그래밍.Network MOC.md",
-    "0. Map_Of_Contents/프로그래밍 MOC.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/7-1 L5수준 소켓 옵션.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/7-2 L4수준 소켓 옵션.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/7. Chapter09 소켓의 다양한 옵션.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/8-1 프로세스 기반의 다중접속 서버.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/8. Chapter10 멀티프로세스 기반의 서버 구현.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/9. Chapter12 IO 멀티 플렉싱.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/2023-09-05.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/웹 서비스 기본 구조.md",
-    "code/multi_flexing_server-17f241b8.o.tmp",
-    "code/echo_client_multi-9d976538.o.tmp",
-    "code/echo_client_multi-9552290b.o.tmp",
-    "code/echo_client_multi-5656aba8.o.tmp",
-    "code/echo_client_multi-ecd90435.o.tmp",
-    "code/echo_client_multi-3ed052ce.o.tmp",
-    "code/echo_client_multi-873ce4a7.o.tmp",
-    "code/multi_client",
-    "code/echo_client_multi.o",
-    "code/echo_client_multi-58758162.o.tmp",
-    "첨부파일/Pasted image 20230905205349.png",
-    "첨부파일/Pasted image 20230905200627.png",
-    "첨부파일/Pasted image 20230905200315.png",
-    "첨부파일/Pasted image 20230905195840.png",
-    "첨부파일/Pasted image 20230905164256.png",
-    "첨부파일/Pasted image 20230905162947.png",
-    "첨부파일/Pasted image 20230905161209.png",
-    "첨부파일/Pasted image 20230904161329.png",
-    "첨부파일/Pasted image 20230903170207.png",
-    "첨부파일/Pasted image 20230903164515.png",
-    "Untitled.canvas"
->>>>>>> 491326e7f4caba026e757b215d8b57da6f93226d
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/10. Chapter13 다양한 입출력 함수들.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/11. Chaper15 소켓과 표준 입출력.md"
   ]
 }
