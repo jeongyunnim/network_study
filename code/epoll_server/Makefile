@@ -1,27 +1,27 @@
 NAME_MULTI_SERVER = ./multi_server_kqueue
 NAME_MULTI_CLIENT = ./multi_client
 
-CC = cc
+CXX = c++
 
-SRCS_MULTI_SERVER = ./multi_flexing_server.c
-SRCS_MULTI_CLIENT = ./echo_client_multi.c
+SRCS_MULTI_SERVER = ./multi_flexing_server_kqueue.cpp
+SRCS_MULTI_CLIENT = ./echo_client_multi.cpp
 
-OBJS_MULTI_SERVER = $(SRCS_MULTI_SERVER:%.c=%.o)
+OBJS_MULTI_SERVER = $(SRCS_MULTI_SERVER:%.cpp=%.o)
 
-OBJS_MULTI_CLIENT = $(SRCS_MULTI_CLIENT:%.c=%.o)
+OBJS_MULTI_CLIENT = $(SRCS_MULTI_CLIENT:%.cpp=%.o)
 
 RM = rm -rf
 
 all : $(NAME_MULTI_SERVER) $(NAME_MULTI_CLIENT)
 
-%.o: %.c
-	$(CC) -c $^ -o $@ 
+%.o: %.cpp
+	$(CXX) -c $^ -o $@ 
 
 $(NAME_MULTI_SERVER): $(OBJS_MULTI_SERVER)
-	$(CC) $^ -o $@
+	$(CXX) $^ -o $@
 
 $(NAME_MULTI_CLIENT): $(OBJS_MULTI_CLIENT)
-	$(CC) $^ -o $@
+	$(CXX) $^ -o $@
 
 clean :
 	$(RM) $(OBJS_MULTI_SERVER) $(OBJS_MULTI_CLIENT)

@@ -1,9 +1,13 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 #include <unistd.h>
+#include <iostream>
+#include <string>
 #include <arpa/inet.h>
 #include <sys/socket.h>
+#include <sys/time.h>
+
 #define BUF_SIZE 1024
 
 void error_handling(char *message);
@@ -11,6 +15,7 @@ void error_handling(char *message);
 int main(int argc, char *argv[])
 {
 	int sock;
+	std::string buffer;
 	char message[BUF_SIZE];
 	int str_len, recv_len, recv_cnt;
 	struct sockaddr_in serv_adr;
@@ -38,7 +43,7 @@ int main(int argc, char *argv[])
 	while (1)
 	{
 		fputs("Input message(Q to quit): ", stdout);
-		fgets(message, BUF_SIZE, stdin);
+		std::cin >> message;
 		if (strcmp(message, "Q\n") == 0)
 			exit (123);
 
