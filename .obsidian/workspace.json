@@ -11,11 +11,9 @@
             "id": "0567e9ea2d44c08a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/0. 소켓 프로그래밍 수업 목표.md",
-                "mode": "source",
-                "source": false
+                "file": "Excalidraw/Drawing 2023-08-28 16.46.23.excalidraw.md"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/0. 소켓 프로그래밍 수업 목표.md",
+                "file": "Excalidraw/Drawing 2023-08-28 16.46.23.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/0. 소켓 프로그래밍 수업 목표.md",
+                "file": "Excalidraw/Drawing 2023-08-28 16.46.23.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/0. 소켓 프로그래밍 수업 목표.md"
+                "file": "Excalidraw/Drawing 2023-08-28 16.46.23.excalidraw.md"
               }
             }
           }
@@ -149,8 +147,8 @@
   },
   "active": "0567e9ea2d44c08a",
   "lastOpenFiles": [
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/7. 파일 송수신.md",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/0. 소켓 프로그래밍 수업 목표.md",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/7. 파일 송수신.md",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/8. 대표적인 TCP 장애유형.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/5. Chapter07 소켓의 우아한 연결종료.md",
     "code/file_send_receieve/client-3db31a39.o.tmp",
