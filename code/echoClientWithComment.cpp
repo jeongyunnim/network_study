@@ -2,9 +2,7 @@
 #include <cstdlib>
 #include <cstring>
 #include <unistd.h>
-/* win32 대체 */
 #include <arpa/inet.h>
-#include <netinet/in.h>
 #include <sys/socket.h>
 
 int main(void)

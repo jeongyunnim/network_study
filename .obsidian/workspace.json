@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/7. 파일 송수신.md",
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/5. Chapter07 소켓의 우아한 연결종료.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "우아",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/7. 파일 송수신.md",
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/5. Chapter07 소켓의 우아한 연결종료.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/7. 파일 송수신.md",
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/5. Chapter07 소켓의 우아한 연결종료.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/7. 파일 송수신.md"
+                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/5. Chapter07 소켓의 우아한 연결종료.md"
               }
             }
           }
@@ -143,21 +144,38 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
   "active": "bf12a7e3918b6e26",
   "lastOpenFiles": [
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/0. 소켓 프로그래밍 수업 목표.md",
+    "code/file_send_receieve/client-3db31a39.o.tmp",
+    "code/file_send_receieve/server-b3ba52e7.o.tmp",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/0. 윤성우의 열혈 TCP IP 소켓 프로그래밍.md",
+    "첨부파일/Pasted image 20230817163141.png",
+    "첨부파일/Pasted image 20230817164122.png",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/7. 파일 송수신.md",
+    "code/file_send_receieve/server-cbf56dc2.o.tmp",
+    "code/file_send_receieve/download_test.txt",
+    "code/file_send_receieve/client",
+    "code/file_send_receieve/client.o",
+    "code/file_send_receieve/client-936f3f30.o.tmp",
+    "code/file_send_receieve/server",
+    "code/file_send_receieve/server.o",
+    "code/file_send_receieve/server-1bbe64de.o.tmp",
+    "code/file_send_receieve/client-348537fe.o.tmp",
+    "첨부파일/Pasted image 20230911162425.png",
+    "첨부파일/Pasted image 20230911160500.png",
+    "Excalidraw/Drawing 2023-08-28 16.46.23.excalidraw.md",
+    "Excalidraw/Drawing 2023-09-11 15.03.48.excalidraw.md",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/0. 소켓 프로그래밍 수업 목표.md",
     "7. 파일 송/수신.md",
-    "7. 파일 송",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/1. 소켓의 본질에 대한 이해.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/웹서브.md",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/6. 멀티플렉싱 서버.md",
     "첨부파일/Pasted image 20230910212248.png",
     "첨부파일/Pasted image 20230910210543.png",
-    "Excalidraw/Drawing 2023-08-28 16.46.23.excalidraw.md",
     "Excalidraw/Drawing 2023-09-10 20.56.45.excalidraw.md",
     "첨부파일/Pasted image 20230910205615.png",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/3. TCP 에코 서비스 전체 흐름.md",
@@ -169,16 +187,6 @@
     "첨부파일/Pasted image 20230910164546.png",
     "첨부파일/Pasted image 20230910164543.png",
     "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/0.외워서 끝내는 네트워크 핵심이론-기초.md",
-    "code/epoll_server/echo_client_multi-e71eaf29.o.tmp",
-    "code/epoll_server/multi_client",
-    "code/epoll_server/echo_client_multi-159ce8ee.o.tmp",
-    "code/epoll_server/echo_client_multi.o",
-    "code/epoll_server/echo_client_multi-7a2cd709.o.tmp",
-    "code/epoll_server/echo_client_multi-b9d5ee13.o.tmp",
-    "code/epoll_server/echo_client_multi-35faf32a.o.tmp",
-    "code/epoll_server/echo_client_multi-6c3e27d7.o.tmp",
-    "code/epoll_server/echo_client_multi-5f6eba7b.o.tmp",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/0. 윤성우의 열혈 TCP IP 소켓 프로그래밍.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/12. Chaper17 select보다 나은 epoll.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/10. Chapter13 다양한 입출력 함수들.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/11. Chaper15 소켓과 표준 입출력.md",
