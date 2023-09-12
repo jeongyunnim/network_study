@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
      **/
 	while ((nRecv = ::recv(sock, byteBuffer, 1024, 0)) > 0)
 	{
-        fwrite(byteBuffer, nRecv, 4, fp);
+        fwrite(byteBuffer, nRecv, 1, fp);
         putchar('#');
 	}
 	shutdown(sock, SHUT_RDWR);
