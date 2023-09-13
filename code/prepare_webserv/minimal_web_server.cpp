@@ -1,55 +1,17 @@
-#include <cstdio>
-#include <cstdlib>
-#include <cstring>
-#include <unistd.h>
-#include <iostream>
-#include <string>
-#include <fstream>
-#include <sstream>
-#include <arpa/inet.h>
-#include <sys/socket.h>
-#include <sys/time.h>
-#include <sys/event.h> // Include kqueue library
-#include "Colors.hpp"
+#include "Server.hpp"
 
 #define BUF_SIZE 65536 // OS socket 버퍼 사이즈를 알아내서 컨트롤 해주는 것이 좋을까?
 #define MAX_EVENTS 50 // 이벤트 수. 무엇을 나타내는가?
 #define PORT_NUM 8080
 #define CRLF "\r\n"
 
-// enum method
-// {
-// 	GET,
-// 	POST,
-// 	PUT,
-// } method;
-
 typedef struct headerInfo
 {
 	std::string method;
 	std::string url;
 	std::string version;
+	bool		keepAliveFlag;
 } headerInfo;
-
-void	initServerSocket(uintptr_t& serverSocket, struct sockaddr_in& serv_adr)
-{
-	serverSocket = socket(PF_INET, SOCK_STREAM, 0);
-	memset(&serv_adr, 0, sizeof(serv_adr));
-	serv_adr.sin_family = AF_INET;
-	serv_adr.sin_addr.s_addr = htonl(INADDR_ANY);
-	serv_adr.sin_port = htons(PORT_NUM);
-
-	if (bind(serverSocket, (struct sockaddr *)&serv_adr, sizeof(serv_adr)) == -1)
-	{
-		std::cout << "bind() error" << std::endl;
-		exit(1);
-	}
-	if (listen(serverSocket, 3) == -1)
-	{
-		std::cout << "listen() error" << std::endl;
-		exit(1);
-	}
-}
 
 void	initKqueue(int& kq)
 {
@@ -63,7 +25,8 @@ void	initKqueue(int& kq)
 
 int	parseBuf(const char *buf, headerInfo& info)
 {
-	std::stringstream bufStream(buf);
+	std::stringstream	bufStream(buf);
+	std::string			token;
 
 	std::getline(bufStream, info.method, ' ');
 	/* 유효성 검증 */
@@ -73,23 +36,42 @@ int	parseBuf(const char *buf, headerInfo& info)
 	/* 유효성 검증 */
 	if (*(info.version.end() - 1) == '\r')
 	{
-		std::cout << "yes this is ascii 13" << std::endl;
+		std::cout << "yes this is ascii " << static_cast<int>(info.version[info.version.size() - 1])<< std::endl;
 		info.version.erase(info.version.size() - 1);
 	}
 	std::cout << info.method << ' ' << info.url << ' ' << info.version << std::endl;
+	// while (1) // header 정보 받아오기
+	// {
+	// 	std::getline(bufStream, token, '\n');
+	// 	/* 유효성 검증 */
+	// 	if (bufStream.eof())
+	// 	{
+	// 		break ;
+	// 	}
+	// 	else if (*(info.version.end() - 1) == '\r')
+	// 	{
+	// 		// std::cout << "yes this is ascii " << static_cast<int>(info.version[info.version.size() - 1])<< std::endl;
+	// 		info.version.erase(info.version.size() - 1);
+	// 	}
+	// }
+
 	return (0);
 }
 
 int main(void)
 {
-	uintptr_t serverSocket, clnt_sock;
-	struct sockaddr_in serv_adr, clnt_adr;
+	Server server;
+
+	server.initServerAddress(PORT_NUM);
+	if (server.initServerListeningSocket() == -1)
+		return (1);
+	uintptr_t clnt_sock;
+	struct sockaddr_in clnt_adr;
 	socklen_t adr_size;
 	int str_len, i;
 	char buf[BUF_SIZE];
 	std::string bufStr;
 
-	initServerSocket(serverSocket, serv_adr);
 	std::cout << "server socket is now listen." << std::endl;
 	int kq;
 	struct kevent changelist[2], *eventlist;
@@ -97,7 +79,7 @@ int main(void)
 
 	initKqueue(kq);
 
-	EV_SET(&changelist[0], serverSocket, EVFILT_READ, EV_ADD, 0, 0, NULL);
+	EV_SET(&changelist[0], server.getSocket(), EVFILT_READ, EV_ADD, 0, 0, NULL); // 마지막 놈은 udata 자리.
 	if (kevent(kq, changelist, 1, NULL, 0, NULL) == -1)
 	{
 		perror("kevent() error");
@@ -117,11 +99,11 @@ int main(void)
 		}
 		for (i = 0; i < nev; i++)
 		{
-			if (eventlist[i].ident == serverSocket) // 연결 요청을 받음.
+			if (eventlist[i].ident == server.getSocket()) // 연결 요청을 받음.
 			{
 				adr_size = sizeof(clnt_adr);
-				clnt_sock = accept(serverSocket, (struct sockaddr *)&clnt_adr, &adr_size);
-
+				clnt_sock = accept(server.getSocket(), (struct sockaddr *)&clnt_adr, &adr_size);
+				// setsockopt(clnt_sock, SOL_SOCKET, SO_KEEPALIVE, );
 				EV_SET(&changelist[0], clnt_sock, EVFILT_READ, EV_ADD, 0, 0, NULL);
 				if (kevent(kq, changelist, 1, NULL, 0, NULL) == -1)
 				{
@@ -139,7 +121,7 @@ int main(void)
 				 * 파싱 규칙을 파악하기 위해서 RFC 문서를 읽도록 하자. 
 				 * <Click with CMD> https://www.rfc-editor.org/rfc/rfc2616
 				 */
-				std::cout << Colors::Magenta << "received message: " << buf << Colors::Reset << std::endl;
+				std::cout << Colors::Magenta << "received message\n" << buf << Colors::Reset << std::endl;
 				if (str_len == 0) // close request
 				{
 					EV_SET(&changelist[0], eventlist[i].ident, EVFILT_READ, EV_DELETE, 0, 0, NULL);
@@ -155,31 +137,52 @@ int main(void)
 				{
 					parseBuf(buf, clientRequest);
 					/* client 요청 분석 */
+					std::string	firstLine;
+					firstLine = clientRequest.version + " ";
 					if (clientRequest.method == "GET") // 대문자 소문자 처리 해야 하나?
 					{
 						std::fstream requestedFile;
 						if (clientRequest.url == "/")
 						{
-							requestedFile.open("./index.html");
-							std::cout << Colors::BlueString("open ./index.html") << std::endl;
+							clientRequest.url = "/index.html";
 						}
-						else
-						{
-							requestedFile.open("." + clientRequest.url);
-							std::cout << Colors::BlueString("open ." + clientRequest.url) << std::endl;
-						}
+						requestedFile.open("." + clientRequest.url);
+						std::cout << Colors::BlueString("open ." + clientRequest.url) << std::endl;
 						if (requestedFile.is_open() == false)
 						{
 							// 4XX error
 							std::cerr << Colors::RedString("client request error: " + clientRequest.url) << std::endl; 
+							write(eventlist[i].ident, "HTTP/1.1 404 Not found\r\n\r\n", 19);
 							shutdown(eventlist[i].ident, SHUT_RDWR);
 						}
 						else
 						{
 							std::string bufTemp;
-							std::getline(requestedFile, bufTemp, static_cast<char>EOF); // 만약 파일이 버퍼의 크기보다 크다면..??
+							std::string fileTemp;
+							std::string extTemp;
+
+							std::getline(requestedFile, fileTemp, static_cast<char>EOF); // 만약 파일이 버퍼의 크기보다 크다면..??
+							bufTemp += "HTTP/1.1 "; // HTTP version 낮은 걸로 바꿔서 보낼 수 있어야 함.
+							bufTemp += "200 ";
+							bufTemp += "OK";
 							bufTemp += CRLF;
-							write(eventlist[i].ident, "HTTP/1.1 200 OK\r\n\r\n", 19);
+							bufTemp += "Content-type: ";
+							extTemp = clientRequest.url.substr(clientRequest.url.size() - 3, 3);
+							if (extTemp == "png")
+							{
+								bufTemp += "image/png";
+							}
+							else
+							{
+								bufTemp += "text";
+							}
+							bufTemp += CRLF;
+							bufTemp += "Content-length: ";
+							bufTemp += std::to_string(fileTemp.size());
+							bufTemp += CRLF;
+							bufTemp += CRLF;
+							bufTemp += fileTemp;
+							write(1, bufTemp.c_str(), bufTemp.size());
 							write(eventlist[i].ident, bufTemp.c_str(), bufTemp.size());
 							std::cout << Colors::Cyan << clientRequest.url << " send complete" << Colors::Reset << std::endl;
 							shutdown(eventlist[i].ident, SHUT_RDWR);
@@ -196,7 +199,7 @@ int main(void)
 		}
 	}
 	free(eventlist); // 동적으로 할당한 메모리 해제
-	close(serverSocket);
+	close(server.getSocket());
 	close(kq);
 	return (0);
 }

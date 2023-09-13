@@ -1,12 +1,14 @@
 NAME 		=	./server
 
 CXX 		=	c++
-CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
+CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98 -fsanitize=address
 
 INCS		=	./Colors.hpp\
+				./Server.hpp\
 				
 SRCS		=	./Colors.cpp\
-				./minimal_web_server.cpp
+				./minimal_web_server.cpp\
+				./Server.cpp\
 
 OBJS		=	$(SRCS:%.cpp=%.o)
 

@@ -11,8 +11,12 @@
             "id": "2673fe3b1a62c2a0",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "6. Archive/HTTP 완벽 가이드/1-3-1 메시지의 구성.md",
+                "mode": "source",
+                "source": false
+              }
             }
           },
           {
@@ -21,14 +25,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6. Archive/HTTP 완벽 가이드/1-3-1 메시지의 구성.md",
+                "file": "0. Map_Of_Contents/프로그래밍.Network MOC.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -57,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "CR",
+                "query": "CRL",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -146,65 +149,76 @@
               "type": "mermaid-toolbar-view",
               "state": {}
             }
+          },
+          {
+            "id": "21037eb9ad1cd6fb",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
           }
         ],
         "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 220.5
+    "width": 220.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:퀵 스위처 열기": false,
-      "graph:그래프 뷰 열기": false,
-      "canvas:새 캔버스 만들기": false,
-      "daily-notes:오늘의 데일리 노트 열기": false,
-      "templates:템플릿 삽입": false,
-      "command-palette:명령어 팔레트 열기": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "0c2adf8bd775fc90",
+  "active": "2673fe3b1a62c2a0",
   "lastOpenFiles": [
-    "code/prepare_webserv/minimal_web_server-77ae9513.o.tmp",
-    "code/prepare_webserv/minimal_web_server-0178c243.o.tmp",
-    "code/prepare_webserv/minimal_web_server-907dcc8d.o.tmp",
-    "code/prepare_webserv/minimal_web_server-dd15a05e.o.tmp",
-    "code/prepare_webserv/server",
-    "code/prepare_webserv/minimal_web_server.o",
-    "code/prepare_webserv/minimal_web_server-f587b578.o.tmp",
-    "code/prepare_webserv/minimal_web_server-ca002c09.o.tmp",
-    "code/prepare_webserv/minimal_web_server-564e6a47.o.tmp",
-    "code/prepare_webserv/minimal_web_server-aa77e717.o.tmp",
-    "code/prepare_webserv/minimal_web_server-3f84e8cc.o.tmp",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/C-S.md",
-    "6. Archive/HTTP 완벽 가이드/1부 HTTP, 웹의 기초.md",
-    "Excalidraw/Drawing 2023-08-28 16.46.23.excalidraw.md",
+    "code/prepare_webserv/minimal_web_server-0b568e04.o.tmp",
+    "code/prepare_webserv/minimal_web_server-a452d8ea.o.tmp",
+    "code/prepare_webserv/minimal_web_server-effbe47c.o.tmp",
+    "code/prepare_webserv/minimal_web_server-605e931a.o.tmp",
+    "code/prepare_webserv/minimal_web_server-16ecc548.o.tmp",
+    "code/prepare_webserv/minimal_web_server-ca625a09.o.tmp",
+    "code/prepare_webserv/minimal_web_server-cef91851.o.tmp",
+    "code/prepare_webserv/minimal_web_server-5a97cdfd.o.tmp",
+    "code/prepare_webserv/minimal_web_server-dd676271.o.tmp",
+    "code/prepare_webserv/minimal_web_server-a9e0c507.o.tmp",
+    "code/prepare_webserv/minimal_web_server-8347ea17.o.tmp",
+    "0. Map_Of_Contents/프로그래밍.Network MOC.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/9. Chapter12 IO 멀티 플렉싱.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/6. Chapter08 도메인 이름과 인터넷 주소.md",
     "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/웹 서비스 기본 구조.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/8. Web을 이루는 핵심기술.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/7. DNS.md",
     "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/네트워크 장애 분류.md",
-    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/WAS.md",
-    "6. Archive/HTTP 완벽 가이드/1-3-1 메시지의 구성.md",
-    "6. Archive/HTTP 완벽 가이드/1-3 HTTP 메시지.md",
-    "6. Archive/HTTP 완벽 가이드/1-2-2 스킴의 포맷.md",
-    "6. Archive/HTTP 완벽 가이드/1-2-1 URL 문법.md",
-    "6. Archive/HTTP 완벽 가이드/1-2 URL과 리소스.md",
-    "6. Archive/HTTP 완벽 가이드/1-1-6 웹의 구성 요소.md",
-    "6. Archive/HTTP 완벽 가이드/1-1-5 프로토콜 버전.md",
-    "6. Archive/HTTP 완벽 가이드/1-1-4 TCP 커넥션.md",
-    "6. Archive/HTTP 완벽 가이드/1-1-3 메시지.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/URL과 URI.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/6-4. TCP 헤더 형식.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5. L3 수준에서 외워야할 것.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-7. 인터넷이란.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/5-5. IPv4 헤더 형식.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/3. Switch는 무엇인가.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/1. OSI 7Layer.md",
+    "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/0.외워서 끝내는 네트워크 핵심이론-기초.md",
     "6. Archive/webserv/kqueue.md",
     "6. Archive/webserv/웹서브.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/12. Chaper17 select보다 나은 epoll.md",
-    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/9. Chapter12 IO 멀티 플렉싱.md",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/6. 멀티플렉싱 서버.md",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/9. 파일 송수신 프로토콜.md",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/0. 소켓 프로그래밍 수업 목표.md",
+    "6. Archive/HTTP 완벽 가이드/MIME 타입.md",
+    "6. Archive/HTTP 완벽 가이드/1-3-2 메시지의 문법-헤더.md",
+    "6. Archive/HTTP 완벽 가이드/1-3-1 메시지의 구성.md",
+    "6. Archive/HTTP 완벽 가이드/1-3 HTTP 메시지.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/7-2 L4수준 소켓 옵션.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/7-1 L5수준 소켓 옵션.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/7. Chapter09 소켓의 다양한 옵션.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/0. 윤성우의 열혈 TCP IP 소켓 프로그래밍.md",
+    "Excalidraw/Drawing 2023-08-28 16.46.23.excalidraw.md",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/C-S.md",
     "첨부파일/Pasted image 20230912161646.png",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/8. 대표적인 TCP 장애유형.md",
     "첨부파일/Pasted image 20230817163141.png",
     "첨부파일/Pasted image 20230817164122.png",
     "첨부파일/Pasted image 20230911162425.png",

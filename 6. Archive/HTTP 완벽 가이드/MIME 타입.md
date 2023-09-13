@@ -27,7 +27,7 @@ Alias: "" # 한글/영어
 ### 생각 (파생된 질문/생각)
 - 
 ### 출 처
-- [Windows 소켓 프로그래밍 입문에서 고성능 서버까지! ](https://www.inflearn.com/course/%EC%9C%88%EB%8F%84%EC%9A%B0-%EC%86%8C%EC%BC%93-%EC%9E%85%EB%AC%B8-%EA%B3%A0%EC%84%B1%EB%8A%A5-%EC%84%9C%EB%B2%84)
-
+- [Windows 소켓 프로그래밍 입문에서 고성능 서버까지!](https://www.inflearn.com/course/%EC%9C%88%EB%8F%84%EC%9A%B0-%EC%86%8C%EC%BC%93-%EC%9E%85%EB%AC%B8-%EA%B3%A0%EC%84%B1%EB%8A%A5-%EC%84%9C%EB%B2%84)
+- [MIME 타입에 대한 설명](https://developer.mozilla.org/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
 ### 연결 문서: {연결 이유}
 - 
