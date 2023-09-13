@@ -182,6 +182,7 @@ int main(void)
 							write(eventlist[i].ident, "HTTP/1.1 200 OK\r\n\r\n", 19);
 							write(eventlist[i].ident, bufTemp.c_str(), bufTemp.size());
 							std::cout << Colors::Cyan << clientRequest.url << " send complete" << Colors::Reset << std::endl;
+							shutdown(eventlist[i].ident, SHUT_RDWR);
 						}
 					}
 					/**
@@ -190,7 +191,6 @@ int main(void)
 					 */
 					// write(1, "HTTP/1.1 200 OK\r\n\r\n", 19);
 					// write(eventlist[i].ident, bufStr.c_str(), bufStr.size());
-					// shutdown(eventlist[i].ident, SHUT_RDWR);
 				}
 			}
 		}
