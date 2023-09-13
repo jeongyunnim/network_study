@@ -1,8 +1,9 @@
+#include <algorithm>
 #include "Server.hpp"
 
 #define BUF_SIZE 65536 // OS socket 버퍼 사이즈를 알아내서 컨트롤 해주는 것이 좋을까?
 #define MAX_EVENTS 50 // 이벤트 수. 무엇을 나타내는가?
-#define PORT_NUM 8080
+#define PORT_NUM 8081
 #define CRLF "\r\n"
 
 typedef struct headerInfo
@@ -138,6 +139,8 @@ int main(void)
 					parseBuf(buf, clientRequest);
 					/* client 요청 분석 */
 					std::string	firstLine;
+					std::string extTemp;
+					
 					firstLine = clientRequest.version + " ";
 					if (clientRequest.method == "GET") // 대문자 소문자 처리 해야 하나?
 					{
@@ -146,44 +149,46 @@ int main(void)
 						{
 							clientRequest.url = "/index.html";
 						}
-						requestedFile.open("." + clientRequest.url);
-						std::cout << Colors::BlueString("open ." + clientRequest.url) << std::endl;
+						extTemp = clientRequest.url.substr(clientRequest.url.find('.') + 1);
+						if (extTemp == "png")
+							requestedFile.open("." + clientRequest.url, std::ios::binary);
+						else
+							requestedFile.open("." + clientRequest.url);
+						std::cout << Colors::BlueString("try open ." + clientRequest.url) << std::endl;
 						if (requestedFile.is_open() == false)
 						{
 							// 4XX error
-							std::cerr << Colors::RedString("client request error: " + clientRequest.url) << std::endl; 
-							write(eventlist[i].ident, "HTTP/1.1 404 Not found\r\n\r\n", 19);
+							std::cerr << Colors::RedString("open failed: ." + clientRequest.url) << std::endl; 
+							write(eventlist[i].ident, "HTTP/1.1 404 Not found\r\n\r\n", 26);
 							shutdown(eventlist[i].ident, SHUT_RDWR);
 						}
 						else
 						{
-							std::string bufTemp;
-							std::string fileTemp;
-							std::string extTemp;
-
-							std::getline(requestedFile, fileTemp, static_cast<char>EOF); // 만약 파일이 버퍼의 크기보다 크다면..??
-							bufTemp += "HTTP/1.1 "; // HTTP version 낮은 걸로 바꿔서 보낼 수 있어야 함.
-							bufTemp += "200 ";
-							bufTemp += "OK";
-							bufTemp += CRLF;
-							bufTemp += "Content-type: ";
-							extTemp = clientRequest.url.substr(clientRequest.url.size() - 3, 3);
+							std::stringstream responseHeaders;
+							requestedFile.seekg(0, std::ios::end);
+							std::streampos fileSize = requestedFile.tellg();
+							requestedFile.seekg(0, std::ios::beg);
+							// HTTP version 낮은 걸로 바꿔서 보낼 수 있어야 함.
+							responseHeaders << "HTTP/1.1 200 OK\r\n";
+							responseHeaders << "Content-type: ";
 							if (extTemp == "png")
 							{
-								bufTemp += "image/png";
+								responseHeaders << "image/png\r\n";
 							}
 							else
 							{
-								bufTemp += "text";
+								responseHeaders << "text/" << extTemp << CRLF;
 							}
-							bufTemp += CRLF;
-							bufTemp += "Content-length: ";
-							bufTemp += std::to_string(fileTemp.size());
-							bufTemp += CRLF;
-							bufTemp += CRLF;
-							bufTemp += fileTemp;
-							write(1, bufTemp.c_str(), bufTemp.size());
-							write(eventlist[i].ident, bufTemp.c_str(), bufTemp.size());
+							responseHeaders << "Content-length: " << fileSize << "\r\n\r\n";
+							write(1, responseHeaders.str().c_str(), responseHeaders.str().size());
+							write(eventlist[i].ident, responseHeaders.str().c_str(), responseHeaders.str().size());
+							while (requestedFile.eof() == false)
+							{
+								requestedFile.read(buf, sizeof(buf));
+								write(eventlist[i].ident, buf, requestedFile.gcount());
+								write(1, buf, requestedFile.gcount());
+							}
+							requestedFile.close();
 							std::cout << Colors::Cyan << clientRequest.url << " send complete" << Colors::Reset << std::endl;
 							shutdown(eventlist[i].ident, SHUT_RDWR);
 						}
