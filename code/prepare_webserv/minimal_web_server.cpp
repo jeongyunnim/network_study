@@ -3,7 +3,7 @@
 
 #define BUF_SIZE 65536 // OS socket 버퍼 사이즈를 알아내서 컨트롤 해주는 것이 좋을까?
 #define MAX_EVENTS 50 // 이벤트 수. 무엇을 나타내는가?
-#define PORT_NUM 8081
+#define PORT_NUM 8082
 #define CRLF "\r\n"
 
 typedef struct headerInfo
@@ -104,14 +104,14 @@ int main(void)
 			{
 				adr_size = sizeof(clnt_adr);
 				clnt_sock = accept(server.getSocket(), (struct sockaddr *)&clnt_adr, &adr_size);
-				// setsockopt(clnt_sock, SOL_SOCKET, SO_KEEPALIVE, );
+				
 				EV_SET(&changelist[0], clnt_sock, EVFILT_READ, EV_ADD, 0, 0, NULL);
 				if (kevent(kq, changelist, 1, NULL, 0, NULL) == -1)
 				{
 					perror("kevent() error");
 					exit(1);
 				}
-				std::cout << "connected client: " << clnt_sock << std::endl;
+				std::cerr << "connected client: " << clnt_sock << std::endl;
 			}
 			else
 			{
@@ -138,10 +138,11 @@ int main(void)
 				{
 					parseBuf(buf, clientRequest);
 					/* client 요청 분석 */
-					std::string	firstLine;
+					// if (소켓의 요청이 keep alive 일 때)
+					int opt = true;
+					setsockopt(clnt_sock, SOL_SOCKET, SO_KEEPALIVE, &opt, sizeof(opt));
 					std::string extTemp;
 					
-					firstLine = clientRequest.version + " ";
 					if (clientRequest.method == "GET") // 대문자 소문자 처리 해야 하나?
 					{
 						std::ifstream requestedFile;
@@ -150,10 +151,7 @@ int main(void)
 							clientRequest.url = "/index.html";
 						}
 						extTemp = clientRequest.url.substr(clientRequest.url.find('.') + 1);
-						if (extTemp == "png")
-							requestedFile.open("." + clientRequest.url, std::ios::binary);
-						else
-							requestedFile.open("." + clientRequest.url);
+						requestedFile.open("." + clientRequest.url, std::ios::in | std::ios::binary);
 						std::cout << Colors::BlueString("try open ." + clientRequest.url) << std::endl;
 						if (requestedFile.is_open() == false)
 						{
@@ -186,11 +184,11 @@ int main(void)
 							{
 								requestedFile.read(buf, sizeof(buf));
 								write(eventlist[i].ident, buf, requestedFile.gcount());
-								write(1, buf, requestedFile.gcount());
+								// write(1, buf, requestedFile.gcount());
 							}
 							requestedFile.close();
 							std::cout << Colors::Cyan << clientRequest.url << " send complete" << Colors::Reset << std::endl;
-							shutdown(eventlist[i].ident, SHUT_RDWR);
+							// shutdown(eventlist[i].ident, SHUT_RDWR);
 						}
 					}
 					/**

@@ -133,12 +133,12 @@ body {
 	background-color: #883a1d;
 	padding: 0 20px;
 	border-radius: 12px;
-	color: yellow;
+	color: darksalmon;
 }
 
 .footer {
 	background-color: #50310e;
-	color: pink;
+	color: limegreen;
 	text-align: center;
 	border-bottom: 10px solid rgba(0,0,0,0.4);
 	border-radius: 10px;

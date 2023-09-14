@@ -21,7 +21,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/7-1 L5수준 소켓 옵션.md",
+                "file": "6. Archive/webserv/웹서브.md",
                 "mode": "source",
                 "source": false
               }
@@ -74,12 +74,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 247.5
+    "width": 307.5
   },
   "right": {
     "id": "7706de9555186884",
@@ -95,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/7-1 L5수준 소켓 옵션.md",
+                "file": "6. Archive/webserv/웹서브.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/7-1 L5수준 소켓 옵션.md",
+                "file": "6. Archive/webserv/웹서브.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/7-1 L5수준 소켓 옵션.md"
+                "file": "6. Archive/webserv/웹서브.md"
               }
             }
           },
@@ -145,6 +144,16 @@
             "state": {
               "type": "mermaid-toolbar-view",
               "state": {}
+            }
+          },
+          {
+            "id": "33d2449110dec31b",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
             }
           }
         ],
@@ -156,18 +165,20 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:퀵 스위처 열기": false,
-      "graph:그래프 뷰 열기": false,
-      "canvas:새 캔버스 만들기": false,
-      "daily-notes:오늘의 데일리 노트 열기": false,
-      "templates:템플릿 삽입": false,
-      "command-palette:명령어 팔레트 열기": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
   "active": "0c2adf8bd775fc90",
   "lastOpenFiles": [
+    "6. Archive/webserv/kqueue.md",
+    "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/7-1 L5수준 소켓 옵션.md",
     "code/prepare_webserv/Colors.hpp-8bb366fd.gch.tmp",
     "code/prepare_webserv/Colors.hpp-80d6b36a.gch.tmp",
     "code/prepare_webserv/Colors.hpp-d0396395.gch.tmp",
@@ -178,7 +189,6 @@
     "code/prepare_webserv/Colors.hpp-bd07c061.gch.tmp",
     "code/prepare_webserv/test.cpp",
     "code/prepare_webserv/minimal_web_server-ec7688ac.o.tmp",
-    "code/prepare_webserv/minimal_web_server-e7ef418a.o.tmp",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/7. Chapter09 소켓의 다양한 옵션.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/0. 윤성우의 열혈 TCP IP 소켓 프로그래밍.md",
     "6. Archive/HTTP 완벽 가이드/1-3-1 메시지의 구성.md",
@@ -198,7 +208,6 @@
     "6. Archive/HTTP 완벽 가이드/1-1-5 프로토콜 버전.md",
     "6. Archive/HTTP 완벽 가이드/1-1-4 TCP 커넥션.md",
     "6. Archive/HTTP 완벽 가이드/1-1-3 메시지.md",
-    "6. Archive/webserv/kqueue.md",
     "6. Archive/webserv/웹서브.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/12. Chaper17 select보다 나은 epoll.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/9. Chapter12 IO 멀티 플렉싱.md",
