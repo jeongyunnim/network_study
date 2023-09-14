@@ -144,7 +144,7 @@ int main(void)
 					firstLine = clientRequest.version + " ";
 					if (clientRequest.method == "GET") // 대문자 소문자 처리 해야 하나?
 					{
-						std::fstream requestedFile;
+						std::ifstream requestedFile;
 						if (clientRequest.url == "/")
 						{
 							clientRequest.url = "/index.html";

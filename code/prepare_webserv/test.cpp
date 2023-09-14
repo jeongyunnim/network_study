@@ -5,17 +5,18 @@
 
 int main(void)
 {
-	std::fstream	file;
+	std::ifstream	file;
 	std::string		fileName("./images/animal01.png");
 	char			buffer[1024];
 
-	// file.open(fileName, std::ios::binary);
-	file.open(fileName);
+	// file.open(fileName, std::ios::in | std::ios::binary);
+	file.open(fileName, std::ios::binary);
+	// file.open(fileName);
 	std::cout << Colors::BlueString("try open " + fileName) << std::endl;
 	if (file.is_open() == false)
 	{
 		std::cerr << Colors::RedString("open failed: " + fileName) << std::endl; 
-		write(1, "HTTP/1.1 404 Not found\r\n\r\n", 26);
+		write(1, "404 Not found\r\n\r\n", 16);
 	}
 	else
 	{
