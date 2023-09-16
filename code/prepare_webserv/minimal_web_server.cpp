@@ -1,8 +1,8 @@
 #include <algorithm>
+#include <vector>
 #include "Server.hpp"
 
 #define BUF_SIZE 65536 // OS socket 버퍼 사이즈를 알아내서 컨트롤 해주는 것이 좋을까?
-#define MAX_EVENTS 50 // 이벤트 수. 무엇을 나타내는가?
 #define PORT_NUM 8082
 #define CRLF "\r\n"
 
@@ -46,14 +46,11 @@ int	parseBuf(const char *buf, headerInfo& info)
 	// 	std::getline(bufStream, token, '\n');
 	// 	/* 유효성 검증 */
 	// 	if (bufStream.eof())
-	// 	{
 	// 		break ;
-	// 	}
 	// 	else if (*(info.version.end() - 1) == '\r')
-	// 	{
-	// 		// std::cout << "yes this is ascii " << static_cast<int>(info.version[info.version.size() - 1])<< std::endl;
 	// 		info.version.erase(info.version.size() - 1);
-	// 	}
+	//	else
+	//		//필요한 정보 map에 저장하기.. 그런데 굳이 저장 해야 하나? 파싱하면서 플래그만 켜주면 되는 거 아닌가?
 	// }
 
 	return (0);
@@ -63,48 +60,51 @@ int main(void)
 {
 	Server server;
 
+	/* 서버 소켓 활성화(listen) */
 	server.initServerAddress(PORT_NUM);
 	if (server.initServerListeningSocket() == -1)
 		return (1);
+	std::cout << "server socket is now listen." << std::endl;
+
 	uintptr_t clnt_sock;
 	struct sockaddr_in clnt_adr;
 	socklen_t adr_size;
 	int str_len, i;
-	char buf[BUF_SIZE];
-	std::string bufStr;
 
-	std::cout << "server socket is now listen." << std::endl;
+
 	int kq;
-	struct kevent changelist[2], *eventlist;
-	int nev;
+	initKqueue(kq); // kernel queue file descriptor 생성
 
-	initKqueue(kq);
+	struct kevent changelist[2]; // change list와 event list를 따로 두는 이유
+	std::vector<struct kevent> eventlist; // 동적 배열에 할당 일반적으로 MacOS는 Kqueue 최대 개수에 제한을 두지 않는다.
+	int eventNum; // 발생한 이벤트 개수
 
-	EV_SET(&changelist[0], server.getSocket(), EVFILT_READ, EV_ADD, 0, 0, NULL); // 마지막 놈은 udata 자리.
+
+	// udata에 각 소켓의 버퍼, 설정, 에러 등을 담아서 이벤트 발생 시 해당 부분을 핸들링 할 수 있도록 한다.
+	EV_SET(&changelist[0], server.getSocket(), EVFILT_READ, EV_ADD, 0, 0, NULL); 
+	/* 서버 리슨 소켓은 읽기만 하면 되므로 */
 	if (kevent(kq, changelist, 1, NULL, 0, NULL) == -1)
 	{
 		perror("kevent() error");
 		exit(1);
 	}
 
-	// eventlist 배열 동적 할당
-	eventlist = (struct kevent *)malloc(sizeof(struct kevent) * MAX_EVENTS);
+	// eventlist 배열 동적 할당 
 	headerInfo clientRequest;
 	while (1)
 	{
-		nev = kevent(kq, NULL, 0, eventlist, MAX_EVENTS, NULL);
-		if (nev == -1)
+		eventNum = kevent(kq, NULL, 0, &eventlist[0], eventlist.size(), NULL);
+		if (eventNum == -1)
 		{
 			perror("kevent() error");
 			break;
 		}
-		for (i = 0; i < nev; i++)
+		for (i = 0; i < eventNum; i++)
 		{
 			if (eventlist[i].ident == server.getSocket()) // 연결 요청을 받음.
 			{
 				adr_size = sizeof(clnt_adr);
 				clnt_sock = accept(server.getSocket(), (struct sockaddr *)&clnt_adr, &adr_size);
-				
 				EV_SET(&changelist[0], clnt_sock, EVFILT_READ, EV_ADD, 0, 0, NULL);
 				if (kevent(kq, changelist, 1, NULL, 0, NULL) == -1)
 				{
@@ -192,16 +192,12 @@ int main(void)
 						}
 					}
 					/**
-					 * @brief 각 요청에 대한 HTTP 헤더 / 바디를 생성해주는 모듈 필요
-					 * 
+					 * 각 요청에 대한 HTTP 헤더 / 바디를 생성해주는 모듈 필요
 					 */
-					// write(1, "HTTP/1.1 200 OK\r\n\r\n", 19);
-					// write(eventlist[i].ident, bufStr.c_str(), bufStr.size());
 				}
 			}
 		}
 	}
-	free(eventlist); // 동적으로 할당한 메모리 해제
 	close(server.getSocket());
 	close(kq);
 	return (0);
