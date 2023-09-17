@@ -55,9 +55,12 @@ int select(int nfds, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, struc
 - kqueue의 프로토타입
 ```c++
 int kqueue(void);
-int kevent(int kq, const sturct kevent *changelist, int nchanges, 
-			struct kevent *eventlist, int nevents, 
-			const struct timespec *timeout)
+int kevent(int kq, 
+		   const sturct kevent *changelist, 
+		   int nchanges, 
+		   struct kevent *eventlist, 
+		   int nevents, 
+		   const struct timespec *timeout)
 ```
 - kevent를 통해서 kqueue를 변경한다.
 	- 변화를 감시할 fd를 커널에 직접 알려줌으로써 커널과 프로그램 사이의 트래픽이 절약된다.

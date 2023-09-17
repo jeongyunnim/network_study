@@ -39,7 +39,8 @@ aliases:
 ```c++
 int kevent(int kq, 
 		   const struct kevent *changelist, 
-		   int nchanges, 
+		   int nchanges,
+		   struct kevent *eventlist,
 		   int nevents, 
 		   const struct timespec *timeout)
 ```
@@ -49,6 +50,8 @@ int kevent(int kq,
 	- kqueue에 등록할 kevent 구조체 주소
 - nchanges
 	- 등록할 이벤트의 개수
+- eventlist
+	- event가 발생했을 때, 커널에서 이벤트를 넣어줄 배열
 - nevents
 	- 들어오는 이벤트의 최대 값
 - timespec

@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*.h": "c",
         "ostream": "cpp",
         "fstream": "cpp",
         "__bit_reference": "cpp",
@@ -63,6 +64,12 @@
         "typeinfo": "cpp",
         "unordered_map": "cpp",
         "utility": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "__bits": "cpp",
+        "__verbose_abort": "cpp",
+        "clocale": "cpp",
+        "variant": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp"
     }
 }

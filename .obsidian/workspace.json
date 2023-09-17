@@ -6,7 +6,7 @@
       {
         "id": "6b291b59831fd5e0",
         "type": "tabs",
-        "dimension": 32.590529247910865,
+        "dimension": 50.61124694376527,
         "children": [
           {
             "id": "0c2adf8bd775fc90",
@@ -25,20 +25,10 @@
       {
         "id": "cc9c95225b11aaa4",
         "type": "tabs",
-        "dimension": 67.40947075208913,
+        "dimension": 49.38875305623472,
         "children": [
           {
             "id": "5fb2a4f66190bea3",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Drawing 2023-08-28 16.46.23.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "210f6fd0fb302b56",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
@@ -47,8 +37,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +87,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "7706de9555186884",
@@ -114,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/Drawing 2023-09-17 02.00.39.excalidraw.md",
+                "file": "6. Archive/webserv/kevent.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/Drawing 2023-09-17 02.00.39.excalidraw.md",
+                "file": "6. Archive/webserv/kevent.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Drawing 2023-09-17 02.00.39.excalidraw.md"
+                "file": "6. Archive/webserv/kevent.md"
               }
             }
           },
@@ -196,20 +186,25 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "210f6fd0fb302b56",
+  "active": "0c2adf8bd775fc90",
   "lastOpenFiles": [
-    "6. Archive/webserv/웹서브.md",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/Non blocking IO.md",
+    "code/prepare_webserv/ChangeList.hpp",
+    "code/prepare_webserv/ChangeList.cpp",
+    "ChangeList.hpp",
+    "ChangeList.cpp",
     "Excalidraw/Drawing 2023-09-17 02.00.39.excalidraw.md",
+    "6. Archive/webserv/웹서브.md",
+    "6. Archive/webserv/kevent.md",
+    "첨부파일/Pasted Image 20230917143926_144.png",
+    "6. Archive/webserv/kqueue.md",
     "Excalidraw/Drawing 2023-08-28 16.46.23.excalidraw.md",
+    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/Non blocking IO.md",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/6. 멀티플렉싱 서버.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/9. Chapter12 IO 멀티 플렉싱.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/10. Chapter13 다양한 입출력 함수들.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/8-1 프로세스 기반의 다중접속 서버.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/8. Chapter10 멀티프로세스 기반의 서버 구현.md",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/7. Chapter09 소켓의 다양한 옵션.md",
-    "6. Archive/webserv/kevent.md",
-    "6. Archive/webserv/kqueue.md",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/9. 파일 송수신 프로토콜.md",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/8. 대표적인 TCP 장애유형.md",
     "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/C-S.md",
@@ -222,9 +217,6 @@
     "code/prepare_webserv/a.out",
     "code/prepare_webserv/Colors.hpp-dc27c527.gch.tmp",
     "code/prepare_webserv/Colors.hpp.gch",
-    "code/prepare_webserv/Colors.hpp-bd07c061.gch.tmp",
-    "code/prepare_webserv/test.cpp",
-    "code/prepare_webserv/minimal_web_server-ec7688ac.o.tmp",
     "6. Archive/윤성우의 열혈 TCP IP 소켓 프로그래밍/0. 윤성우의 열혈 TCP IP 소켓 프로그래밍.md",
     "6. Archive/HTTP 완벽 가이드/1-3-1 메시지의 구성.md",
     "6. Archive/HTTP 완벽 가이드/1부 HTTP, 웹의 기초.md",
@@ -233,7 +225,6 @@
     "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/7. DNS.md",
     "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/네트워크 장애 분류.md",
     "6. Archive/외워서 끝내는 네트워크 핵심이론-기초/WAS.md",
-    "6. Archive/HTTP 완벽 가이드/1-3 HTTP 메시지.md",
     "첨부파일/Pasted image 20230912161646.png",
     "첨부파일/Pasted image 20230817163141.png",
     "첨부파일/Pasted image 20230817164122.png",
@@ -242,7 +233,6 @@
     "첨부파일/Pasted image 20230910212248.png",
     "첨부파일/Pasted image 20230910210543.png",
     "첨부파일/Pasted image 20230910205615.png",
-    "첨부파일/Pasted image 20230910164546.png",
-    "첨부파일/Pasted image 20230910164543.png"
+    "첨부파일/Pasted image 20230910164546.png"
   ]
 }
