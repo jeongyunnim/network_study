@@ -1,3 +1,4 @@
+#pragma once
 #include "Server.hpp"
 #include <vector>
 
@@ -7,7 +8,7 @@ public:
 	ChangeList(void);
 	~ChangeList(void);
 	void changeEvent(uintptr_t nIdent, int nFilter, int nFlags, void *pUdata);
-	void deleteEvent(uintptr_t socketFd);
+	void clearEvent(void);
 	std::vector<struct kevent>& getKeventVector(void);
 	size_t getSize(void);
 

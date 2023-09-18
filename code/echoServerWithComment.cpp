@@ -40,7 +40,16 @@ int main(void)
 	 * end-point 서버/클라이언트 개발자에게 port 번호는 소켓에 대한 식별자이자 프로세스를 구별하는 식별자이다.
 	 * -> socket을 프로세스가 열기 때문에
 	*/
-	if (::bind(hSocket, (sockaddr*)&svraddr, sizeof(svraddr)) == SO_ERROR)
+	int opt = true;
+	if (setsockopt(hSocket, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt)) == -1)
+	{
+		std::cout << "nono" << std::endl;
+	}
+	// if (setsockopt(hSocket, SOL_SOCKET, SO_REUSEPORT, &opt, sizeof(opt)) == -1)
+	// {
+	// 	std::cout << "nono" << std::endl;
+	// }
+	if (::bind(hSocket, (sockaddr*)&svraddr, sizeof(svraddr)) == -1)
 	{
 		std::cout << "Error: 소켓에 IP주소와 port를 바인드할 수 없음." << std::endl;
 		return (1);
@@ -55,8 +64,8 @@ int main(void)
 	 * 		서버가 listen에서 accept되고 서버 통신 소켓을 오픈하기 까지의 순간 동시에 connect 하려는 클라이언트의 요청이 무시되는 문제가 있었음.
 	 * 		backlog queue -> 현재는 OS 레벨에서 모두 처리해준다(SOMAXCONN: 대기열의 최대 연결 요청 수 설정)
 	 */
-	{
 	if (::listen(hSocket, SOMAXCONN) == SO_ERROR)
+	{
 		std::cout << "Error: listen." << std::endl;
 		return (1);
 	}
@@ -75,7 +84,6 @@ int main(void)
 	//4.1 클라이언트 연결을 받아들이고 새로운 소켓 생성(개방)
 	while ((hClient = ::accept(hSocket, (sockaddr*)&clientaddr, &nAddrLen)) != -1)
 	{
-		std::cout << "새 클라이언트 생성" << std::endl;
 		//4.2 클라이언트로부터 문자열을 수신
 		/**
 		 * @brief Construct a new while object

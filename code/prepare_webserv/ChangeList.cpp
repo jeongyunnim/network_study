@@ -19,18 +19,9 @@ void ChangeList::changeEvent(uintptr_t ident, int filter, int flags, void *udata
 	_keventVector.push_back(target);
 }
 
-void ChangeList::deleteEvent(uintptr_t socketFd)
+void ChangeList::clearEvent(void)
 {
-	for (std::vector<struct kevent>::iterator it = _keventVector.begin(); it != _keventVector.end(); it++)
-	{
-		if (it->ident == socketFd)
-		{
-			std::cout << Colors::Magenta << "del: Client is disconnected" << socketFd << Colors::Reset << std::endl;
-			_keventVector.erase(it);
-			return ;
-		}
-	}
-	std::cout << Colors::Red << "del: Client " << socketFd << "Not found error" << Colors::Reset << std::endl;
+	_keventVector.clear();
 }
 
 std::vector<struct kevent>& ChangeList::getKeventVector(void)

@@ -78,7 +78,7 @@ int	parseBuf(const char *buf, headerInfo& info)
 }
 
 
-int main(int argc, char *argv[])
+int main(void)
 {
 	Server server;
 
@@ -107,69 +107,76 @@ int main(int argc, char *argv[])
 	// 하지만 error를 따로 이벤트 감지할 필요가 있는지의 의문이 든다. -> eventlist[i].flag & EV_ERROR == true 와 어떤 차이가 있는가?
 	struct kevent eventList[MAX_NEVENTS]; // 동적 배열에 할당 일반적으로 MacOS는 Kqueue 최대 개수에 제한을 두지 않는다.
 	int occurEventNum; // kevent에서 발생한 이벤트 개수
+	
+	std::vector<udata>	clientData;
+	udata				udataTemp;
+	udataTemp.fd = server.getSocket();
+	clientData.push_back(udataTemp);
 
 	// udata에 각 소켓의 버퍼, 설정, 에러 등을 담아서 이벤트 발생 시 해당 부분을 핸들링 할 수 있도록 한다.
-	changeList.changeEvent(server.getSocket(), EVFILT_READ, EV_ADD, NULL);
+	changeList.changeEvent(server.getSocket(), EVFILT_READ, EV_ADD, &clientData[0]);
 
-	/* 서버 리슨 소켓은 읽기만 하면 되므로 */
-	if (kevent(kq, changeList.getKeventVector().data(), 1, NULL, 0, NULL) == -1)
-	{
-		perror("kevent() error");
-		exit(1);
-	}
-
-	// eventlist 배열 동적 할당 
+	// /* 서버 리슨 소켓은 읽기만 하면 되므로 */
+	// if (kevent(kq, changeList.getKeventVector().data(), 1, NULL, 0, NULL) == -1)
+	// {
+	// 	perror("kevent() error");
+	// 	exit(1);
+	// }
 	headerInfo clientRequest;
 	while (1)
 	{
-		occurEventNum = kevent(kq, NULL, 0, eventList, MAX_NEVENTS, NULL);
+		occurEventNum = kevent(kq, changeList.getKeventVector().data(), changeList.getKeventVector().size(), eventList, MAX_NEVENTS, NULL);
 		if (occurEventNum == -1)
 		{
 			perror("kevent() error");
 			break;
 		}
+		changeList.clearEvent();
 		for (i = 0; i < occurEventNum; i++)
 		{
 			if (eventList[i].ident == server.getSocket()) // 연결 요청을 받음.
 			{
+
 				adr_size = sizeof(clnt_adr);
 				clnt_sock = accept(server.getSocket(), (struct sockaddr *)&clnt_adr, &adr_size);
-				changeList.changeEvent(clnt_sock, EVFILT_READ, EV_ADD, NULL);
-				if (kevent(kq, changeList.getKeventVector().data(), 1, NULL, 0, NULL) == -1)
-				{
-					perror("kevent() error");
-					exit(1);
-				}
+				udataTemp.fd = clnt_sock;
+				clientData.push_back(udataTemp);
+				changeList.changeEvent(clnt_sock, EVFILT_READ, EV_ADD, &clientData[clientData.size()]);
+				// if (kevent(kq, changeList.getKeventVector().data(), 1, NULL, 0, NULL) == -1)
+				// {
+				// 	perror("kevent() error");
+				// 	exit(1);
+				// }
 				std::cerr << "connected client: " << clnt_sock << std::endl;
 			}
 			else
 			{
-				str_len = read(eventList[i].ident, buf, BUF_SIZE);
+				udata *clientData = static_cast<udata *>(eventList[i].udata);
+				str_len = read(eventList[i].ident, clientData->buf, BUFFER_SIZE);
 				/**
 				 * string에 담아서 파싱해도 괜찮을까? 속도 등 효율 측면에서 생각해볼 때.
 				 * CRLF까지 읽어야 하므로.. 일단 개행까지 읽으며 처리해주고, 보낼 때만 잘 해결을 해주면 괜찮으려나?
 				 * 파싱 규칙을 파악하기 위해서 RFC 문서를 읽도록 하자. 
 				 * <Click with CMD> https://www.rfc-editor.org/rfc/rfc2616
 				 */
-				std::cout << Colors::Magenta << "received message\n" << buf << Colors::Reset << std::endl;
+				std::cout << Colors::Magenta << "received message\n" << clientData->buf << Colors::Reset << std::endl;
 				if (str_len == 0) // close request
 				{
-					EV_SET(&changelist[0], eventlist[i].ident, EVFILT_READ, EV_DELETE, 0, 0, NULL);
-					if (kevent(kq, changelist, 1, NULL, 0, NULL) == -1)
-					{
-						perror("kevent() error");
-						exit(1);
-					}
-					close(eventlist[i].ident);
-					printf("closed client: %lu\n", eventlist[i].ident);
+					/**
+					 * @brief 여기서 client data 벡터를 지워야 한다.
+					 * 
+					 */
+					changeList.changeEvent(eventList[i].ident, EVFILT_READ, EV_DELETE, NULL);
+					close(eventList[i].ident);
+					printf("closed client: %lu\n", eventList[i].ident);
 				}
 				else
 				{
-					parseBuf(buf, clientRequest);
+					parseBuf(clientData->buf, clientRequest);
 					/* client 요청 분석 */
 					// if (소켓의 요청이 keep alive 일 때)
-					int opt = true;
-					setsockopt(clnt_sock, SOL_SOCKET, SO_KEEPALIVE, &opt, sizeof(opt));
+					// int opt = true;
+					// setsockopt(clnt_sock, SOL_SOCKET, SO_KEEPALIVE, &opt, sizeof(opt));
 					std::string extTemp;
 					
 					if (clientRequest.method == "GET") // 대문자 소문자 처리 해야 하나?
@@ -186,8 +193,8 @@ int main(int argc, char *argv[])
 						{
 							// 4XX error
 							std::cerr << Colors::RedString("open failed: ." + clientRequest.url) << std::endl; 
-							write(eventlist[i].ident, "HTTP/1.1 404 Not found\r\n\r\n", 26);
-							shutdown(eventlist[i].ident, SHUT_RDWR);
+							write(eventList[i].ident, "HTTP/1.1 404 Not found\r\n\r\n", 26);
+							shutdown(eventList[i].ident, SHUT_RDWR);
 						}
 						else
 						{
@@ -208,16 +215,14 @@ int main(int argc, char *argv[])
 							}
 							responseHeaders << "Content-length: " << fileSize << "\r\n\r\n";
 							write(1, responseHeaders.str().c_str(), responseHeaders.str().size());
-							write(eventlist[i].ident, responseHeaders.str().c_str(), responseHeaders.str().size());
+							write(eventList[i].ident, responseHeaders.str().c_str(), responseHeaders.str().size());
 							while (requestedFile.eof() == false)
 							{
-								requestedFile.read(buf, sizeof(buf));
-								write(eventlist[i].ident, buf, requestedFile.gcount());
-								// write(1, buf, requestedFile.gcount());
+								requestedFile.read(clientData->buf, sizeof(clientData->buf));
+								write(eventList[i].ident, clientData->buf, requestedFile.gcount());
 							}
 							requestedFile.close();
 							std::cout << Colors::Cyan << clientRequest.url << " send complete" << Colors::Reset << std::endl;
-							// shutdown(eventlist[i].ident, SHUT_RDWR);
 						}
 					}
 					/**
