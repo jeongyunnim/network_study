@@ -10,7 +10,7 @@
 
 #define BUF_SIZE 1024
 
-void error_handling(char *message);
+void error_handling(std::string message);
 
 int main(int argc, char *argv[])
 {
@@ -44,8 +44,8 @@ int main(int argc, char *argv[])
 	{
 		fputs("Input message(Q to quit): ", stdout);
 		std::cin >> message;
-		if (strcmp(message, "Q\n") == 0)
-			exit (123);
+		if (strcmp(message, "Q") == 0)
+			break ;
 
 		str_len = write(sock, message, strlen(message));
 		recv_len = 0;
@@ -57,15 +57,14 @@ int main(int argc, char *argv[])
 			recv_len += recv_cnt;
 		}
 		message[recv_len] = 0;
-		printf("Message from server: %s", message);
+		printf("Message from server: %s\n", message);
 	} 
 	close(sock);
 	return (0);
 }
 
-void error_handling(char *message)
+void error_handling(std::string message)
 {
-	fputs(message, stderr);
-	fputc('\n', stderr);
+	std::cerr << message << std::endl;
 	exit(1);
 }

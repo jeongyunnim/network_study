@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 	FD_SET(serv_sock, &reads);
 	/**
 	 * fd_max를 서버 소켓으로 초기화 하는 이유
-	 * 
+	 * 서버 소켓도 읽어야 하니까.
 	 */
 	fd_max = serv_sock;
 
@@ -93,7 +93,6 @@ int main(int argc, char *argv[])
 					}
 					else
 					{
-						write(i, buf, str_len);
 						write(i, buf, str_len);
 						write(1, buf, str_len);
 					}

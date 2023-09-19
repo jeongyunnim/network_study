@@ -6,16 +6,42 @@ ChangeList::ChangeList(void)
 
 ChangeList::~ChangeList(void) {}
 
-void ChangeList::changeEvent(uintptr_t ident, int filter, int flags, void *udata)
+static void deleteEvent(std::vector<struct kevent>& kevents, std::vector<struct udata>& udatas, uintptr_t fd)
 {
-	struct kevent target;
+	for (std::vector<struct kevent>::iterator it = kevents.begin(); it != kevents.end(); it++)
+		{
+			if (it->ident == fd)
+			{
+				kevents.erase(it);
+				break ;
+			}
+		}
+		for (std::vector<struct udata>::iterator it = udatas.begin(); it != udatas.end(); it++)
+		{
+			if (it->fd == fd)
+			{
+				udatas.erase(it);
+				return ;
+			}
+		}
+}
 
+void ChangeList::changeEvent(uintptr_t ident, int filter, int flags)
+{
+	// fflags로 CGI 처리와 signal 등 처리 해야함.
+	struct kevent	target;
+	struct udata	udataTemp;
+
+	if (flags & EV_DELETE == true)
+		return (deleteEvent(_keventVector, _udataVector, ident));
+	udataTemp.fd = ident;
+	_udataVector.push_back(udataTemp);
 	target.ident = ident;
 	target.filter = filter;
 	target.flags = flags;
 	target.fflags = 0;
 	target.data = 0;
-	target.udata = udata;
+	target.udata = &_udataVector[_udataVector.size() - 1];
 	_keventVector.push_back(target);
 }
 

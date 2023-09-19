@@ -108,6 +108,7 @@ int main(int argc, char *argv[])
                 else
                 {
                     write(eventlist[i].ident, buf, str_len); // echo
+                    write(1, buf, str_len);
                 }
             }
         }

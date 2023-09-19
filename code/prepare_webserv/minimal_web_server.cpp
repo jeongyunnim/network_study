@@ -25,16 +25,6 @@ typedef enum eventInfo // 필요한가?
 	SIGNAL_EVENT,
 } eventInfo;
 
-typedef struct udata
-{
-	uintptr_t	fd;
-	char		buf[BUFFER_SIZE];
-	/* 
-	 * 합칠 데이터를 여기에 만들어주는 것이 좋으려나? vector로 이어주게끔..
-	 * 또 필요한 정보들이 무엇이 있을지 파악해야 함.
-	 */
-} udata;
-
 void	initKqueue(int& kq)
 {
 	kq = kqueue();
@@ -77,6 +67,47 @@ int	parseBuf(const char *buf, headerInfo& info)
 	return (0);
 }
 
+int	handleRequestGET(headerInfo& clientRequest, struct kevent client)
+{
+	std::ifstream requestedFile;
+	std::string extTemp;
+
+	if (clientRequest.url == "/")
+		clientRequest.url = "/index.html";
+	extTemp = clientRequest.url.substr(clientRequest.url.find('.') + 1);
+	requestedFile.open("." + clientRequest.url, std::ios::binary);
+	if (requestedFile.is_open() == false)
+	{
+		// 4XX error
+		std::cerr << Colors::RedString("open failed: ." + clientRequest.url) << std::endl; 
+		write(client.ident, "HTTP/1.1 404 Not found\r\n\r\n", 26);
+		shutdown(client.ident, SHUT_RDWR);
+	}
+	else
+	{
+		std::stringstream responseHeaders;
+		requestedFile.seekg(0, std::ios::end);
+		std::streampos fileSize = requestedFile.tellg();
+		requestedFile.seekg(0, std::ios::beg);
+		// HTTP version 낮은 걸로 바꿔서 보낼 수 있어야 함.
+		responseHeaders << "HTTP/1.1 200 OK\r\n";
+		responseHeaders << "Content-type: ";
+		if (extTemp == "png")
+			responseHeaders << "image/";
+		else
+			responseHeaders << "text/";
+		responseHeaders << extTemp << CRLF << "Content-length: " << fileSize << "\r\n\r\n";
+		write(1, responseHeaders.str().c_str(), responseHeaders.str().size());
+		write(client.ident, responseHeaders.str().c_str(), responseHeaders.str().size());
+		while (requestedFile.eof() == false)
+		{
+			requestedFile.read(static_cast<struct udata>(client.udata), sizeof(static_cast<struct udata>(client.udata)));
+			write(client.ident, static_cast<struct udata>(client.udata), requestedFile.gcount());
+		}
+		requestedFile.close();
+		std::cout << Colors::Cyan << clientRequest.url << " send complete" << Colors::Reset << std::endl;
+	}
+}
 
 int main(void)
 {
@@ -103,26 +134,17 @@ int main(void)
 	int kq;
 	initKqueue(kq); // kernel queue file descriptor 생성
 
-	ChangeList changeList; // change list와 event list를 따로 두는 이유 read / write / error / signal 등
+	ChangeList changeList;
+	// change list와 event list를 따로 두는 이유 read / write / error / signal 등
 	// 하지만 error를 따로 이벤트 감지할 필요가 있는지의 의문이 든다. -> eventlist[i].flag & EV_ERROR == true 와 어떤 차이가 있는가?
-	struct kevent eventList[MAX_NEVENTS]; // 동적 배열에 할당 일반적으로 MacOS는 Kqueue 최대 개수에 제한을 두지 않는다.
+	struct kevent eventList[MAX_NEVENTS]; 
+	// 일반적으로 MacOS는 Kqueue 최대 개수에 제한을 두지 않는다.
 	int occurEventNum; // kevent에서 발생한 이벤트 개수
 	
-	std::vector<udata>	clientData;
-	udata				udataTemp;
-	udataTemp.fd = server.getSocket();
-	clientData.push_back(udataTemp);
-
 	// udata에 각 소켓의 버퍼, 설정, 에러 등을 담아서 이벤트 발생 시 해당 부분을 핸들링 할 수 있도록 한다.
-	changeList.changeEvent(server.getSocket(), EVFILT_READ, EV_ADD, &clientData[0]);
-
-	// /* 서버 리슨 소켓은 읽기만 하면 되므로 */
-	// if (kevent(kq, changeList.getKeventVector().data(), 1, NULL, 0, NULL) == -1)
-	// {
-	// 	perror("kevent() error");
-	// 	exit(1);
-	// }
+	changeList.changeEvent(server.getSocket(), EVFILT_READ, EV_ADD);
 	headerInfo clientRequest;
+
 	while (1)
 	{
 		occurEventNum = kevent(kq, changeList.getKeventVector().data(), changeList.getKeventVector().size(), eventList, MAX_NEVENTS, NULL);
@@ -139,14 +161,8 @@ int main(void)
 
 				adr_size = sizeof(clnt_adr);
 				clnt_sock = accept(server.getSocket(), (struct sockaddr *)&clnt_adr, &adr_size);
-				udataTemp.fd = clnt_sock;
-				clientData.push_back(udataTemp);
-				changeList.changeEvent(clnt_sock, EVFILT_READ, EV_ADD, &clientData[clientData.size()]);
-				// if (kevent(kq, changeList.getKeventVector().data(), 1, NULL, 0, NULL) == -1)
-				// {
-				// 	perror("kevent() error");
-				// 	exit(1);
-				// }
+
+				changeList.changeEvent(clnt_sock, EVFILT_READ, EV_ADD);
 				std::cerr << "connected client: " << clnt_sock << std::endl;
 			}
 			else
@@ -162,11 +178,7 @@ int main(void)
 				std::cout << Colors::Magenta << "received message\n" << clientData->buf << Colors::Reset << std::endl;
 				if (str_len == 0) // close request
 				{
-					/**
-					 * @brief 여기서 client data 벡터를 지워야 한다.
-					 * 
-					 */
-					changeList.changeEvent(eventList[i].ident, EVFILT_READ, EV_DELETE, NULL);
+					changeList.changeEvent(eventList[i].ident, EVFILT_READ, EV_DELETE);
 					close(eventList[i].ident);
 					printf("closed client: %lu\n", eventList[i].ident);
 				}
@@ -177,53 +189,10 @@ int main(void)
 					// if (소켓의 요청이 keep alive 일 때)
 					// int opt = true;
 					// setsockopt(clnt_sock, SOL_SOCKET, SO_KEEPALIVE, &opt, sizeof(opt));
-					std::string extTemp;
 					
-					if (clientRequest.method == "GET") // 대문자 소문자 처리 해야 하나?
+					if (clientRequest.method == "GET")
 					{
-						std::ifstream requestedFile;
-						if (clientRequest.url == "/")
-						{
-							clientRequest.url = "/index.html";
-						}
-						extTemp = clientRequest.url.substr(clientRequest.url.find('.') + 1);
-						requestedFile.open("." + clientRequest.url, std::ios::in | std::ios::binary);
-						std::cout << Colors::BlueString("try open ." + clientRequest.url) << std::endl;
-						if (requestedFile.is_open() == false)
-						{
-							// 4XX error
-							std::cerr << Colors::RedString("open failed: ." + clientRequest.url) << std::endl; 
-							write(eventList[i].ident, "HTTP/1.1 404 Not found\r\n\r\n", 26);
-							shutdown(eventList[i].ident, SHUT_RDWR);
-						}
-						else
-						{
-							std::stringstream responseHeaders;
-							requestedFile.seekg(0, std::ios::end);
-							std::streampos fileSize = requestedFile.tellg();
-							requestedFile.seekg(0, std::ios::beg);
-							// HTTP version 낮은 걸로 바꿔서 보낼 수 있어야 함.
-							responseHeaders << "HTTP/1.1 200 OK\r\n";
-							responseHeaders << "Content-type: ";
-							if (extTemp == "png")
-							{
-								responseHeaders << "image/png\r\n";
-							}
-							else
-							{
-								responseHeaders << "text/" << extTemp << CRLF;
-							}
-							responseHeaders << "Content-length: " << fileSize << "\r\n\r\n";
-							write(1, responseHeaders.str().c_str(), responseHeaders.str().size());
-							write(eventList[i].ident, responseHeaders.str().c_str(), responseHeaders.str().size());
-							while (requestedFile.eof() == false)
-							{
-								requestedFile.read(clientData->buf, sizeof(clientData->buf));
-								write(eventList[i].ident, clientData->buf, requestedFile.gcount());
-							}
-							requestedFile.close();
-							std::cout << Colors::Cyan << clientRequest.url << " send complete" << Colors::Reset << std::endl;
-						}
+
 					}
 					/**
 					 * 각 요청에 대한 HTTP 헤더 / 바디를 생성해주는 모듈 필요
