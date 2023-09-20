@@ -114,13 +114,6 @@ int main(void)
 {
 	Server server;
 
-	//config file parsing
-	// if (argc != 2)
-	// {
-	// 	std::cerr << Colors::RedString("Error: Argument count error") << std::endl;
-	// 	return (1);
-	// }
-
 	/* 서버 소켓 활성화(listen) */
 	server.initServerAddress(PORT_NUM);
 	if (server.initServerListeningSocket() == -1)
