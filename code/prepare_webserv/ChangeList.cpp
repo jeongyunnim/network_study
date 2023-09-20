@@ -9,21 +9,22 @@ ChangeList::~ChangeList(void) {}
 static void deleteEvent(std::vector<struct kevent>& kevents, std::vector<struct udata>& udatas, uintptr_t fd)
 {
 	for (std::vector<struct kevent>::iterator it = kevents.begin(); it != kevents.end(); it++)
+	{
+		if (it->ident == fd)
 		{
-			if (it->ident == fd)
-			{
-				kevents.erase(it);
-				break ;
-			}
+			kevents.erase(it);
+			break ;
 		}
-		for (std::vector<struct udata>::iterator it = udatas.begin(); it != udatas.end(); it++)
+	}
+	for (std::vector<struct udata>::iterator it = udatas.begin(); it != udatas.end(); it++)
+	{
+		if (it->fd == fd)
 		{
-			if (it->fd == fd)
-			{
-				udatas.erase(it);
-				return ;
-			}
+			udatas.erase(it);
+			return ;
 		}
+	}
+	std::cout << Colors::Red << "socket " << fd << "is disconnected" << Colors::Reset << std::endl;
 }
 
 void ChangeList::changeEvent(uintptr_t ident, int filter, int flags)
@@ -32,7 +33,8 @@ void ChangeList::changeEvent(uintptr_t ident, int filter, int flags)
 	struct kevent	target;
 	struct udata	udataTemp;
 
-	if (flags & EV_DELETE == true)
+	std::cout << "udata size: " << _udataVector.size() << std::endl;
+	if (flags == EV_DELETE)
 		return (deleteEvent(_keventVector, _udataVector, ident));
 	udataTemp.fd = ident;
 	_udataVector.push_back(udataTemp);

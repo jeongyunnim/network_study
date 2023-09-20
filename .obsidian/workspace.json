@@ -10,39 +10,14 @@
           {
             "id": "0c2adf8bd775fc90",
             "type": "leaf",
-            "pinned": true,
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "6. Archive/HTTP 완벽 가이드/2.05 웹 서버.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "9c81c9e9237c3df0",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
-          },
-          {
-            "id": "da1adac23952457e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "6. Archive/HTTP 완벽 가이드/1.03 HTTP 메시지.md",
-                "mode": "source",
-                "source": false
+                "file": "Excalidraw/Drawing 2023-09-17 02.00.39.excalidraw.md"
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -92,7 +67,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 340.5024719238281
+    "width": 200
   },
   "right": {
     "id": "7706de9555186884",
@@ -108,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "6. Archive/HTTP 완벽 가이드/1.03 HTTP 메시지.md",
+                "file": "Excalidraw/Drawing 2023-09-17 02.00.39.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6. Archive/HTTP 완벽 가이드/1.03 HTTP 메시지.md",
+                "file": "Excalidraw/Drawing 2023-09-17 02.00.39.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,8 +123,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6. Archive/HTTP 완벽 가이드/1.03 HTTP 메시지.md"
+                "file": "Excalidraw/Drawing 2023-09-17 02.00.39.excalidraw.md"
               }
+            }
+          },
+          {
+            "id": "1ba540a15f0bcd6d",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
+              "state": {}
             }
           },
           {
@@ -161,77 +144,71 @@
                 "sortOrder": "frequency"
               }
             }
-          },
-          {
-            "id": "1ba540a15f0bcd6d",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 266.5
+    "width": 220.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
+      "switcher:퀵 스위처 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "da1adac23952457e",
+  "active": "0c2adf8bd775fc90",
   "lastOpenFiles": [
-    "6. Archive/HTTP 완벽 가이드/1.01-2 트랜잭션.md",
-    "6. Archive/HTTP 완벽 가이드/1.03 HTTP 메시지.md",
-    "6. Archive/HTTP 완벽 가이드/1.0 1부 HTTP, 웹의 기초.md",
-    "6. Archive/HTTP 완벽 가이드/0. HTTP 완벽 가이드.md",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/1. 소켓의 본질에 대한 이해.md",
-    "6. Archive/window 소켓 프로그래밍 입문에서 고성능 서버까지!/0. 소켓 프로그래밍 수업 목표.md",
-    "6. Archive/HTTP 완벽 가이드/1.03-3.2 GET.md",
-    "6. Archive/HTTP 완벽 가이드/1.03-3 메서드.md",
-    "6. Archive/HTTP 완벽 가이드/1.03-2 메시지의 문법-헤더.md",
-    "6. Archive/HTTP 완벽 가이드/1.03-1 메시지의 구성.md",
-    "6. Archive/HTTP 완벽 가이드/1.02-2 스킴의 포맷.md",
-    "6. Archive/HTTP 완벽 가이드/1.02-1 URL 문법.md",
-    "6. Archive/HTTP 완벽 가이드/1.01-6 웹의 구성 요소.md",
-    "6. Archive/HTTP 완벽 가이드/1.02 URL과 리소스.md",
-    "6. Archive/HTTP 완벽 가이드/1.01-5 프로토콜 버전.md",
-    "6. Archive/HTTP 완벽 가이드/1.01-1 리소스.md",
-    "6. Archive/HTTP 완벽 가이드/1.01 HTTP 개관.md",
-    "6. Archive/HTTP 완벽 가이드/1.01-3 메시지.md",
-    "6. Archive/HTTP 완벽 가이드/1.03-3.8 DELETE.md",
+    "code/prepare_webserv/ChangeList-fd8ac8ae.o.tmp",
+    "code/prepare_webserv/ChangeList-12dc51bb.o.tmp",
+    "code/prepare_webserv/ChangeList-588a6053.o.tmp",
+    "code/prepare_webserv/server",
+    "code/prepare_webserv/Server.o",
+    "code/prepare_webserv/Server-d09f614a.o.tmp",
+    "code/prepare_webserv/ChangeList.o",
+    "code/prepare_webserv/ChangeList-85a493cb.o.tmp",
+    "code/prepare_webserv/minimal_web_server.o",
+    "code/prepare_webserv/minimal_web_server-ccc05263.o.tmp",
+    "code/prepare_webserv/Colors-378c61bc.o.tmp",
     "첨부파일/Pasted image 20230919204939.png",
-    "6. Archive/HTTP 완벽 가이드/1.03-3.5 POST.md",
     "첨부파일/Pasted image 20230919204716.png",
-    "6. Archive/HTTP 완벽 가이드/1.03-3.4 PUT.md",
-    "6. Archive/HTTP 완벽 가이드/1.04 커넥션 관리.md",
-    "6. Archive/HTTP 완벽 가이드/1.03-2 메시지의 문법-시작줄.md",
-    "6. Archive/HTTP 완벽 가이드/1.03-2 메시지의 문법.md",
-    "6. Archive/HTTP 완벽 가이드/3.0 3부 식별, 인가, 보안.md",
-    "6. Archive/HTTP 완벽 가이드/2.05 웹 서버.md",
     "첨부파일/Pasted image 20230919193331.png",
     "첨부파일/Pasted image 20230919172257.png",
     "첨부파일/Pasted image 20230919165356.png",
     "첨부파일/Pasted image 20230919163924.png",
-    "code/epoll_server/multi_flexing_server_kqueue-2ad2bc10.o.tmp",
-    "code/epoll_server/echo_client_multi-9cc1eba5.o.tmp",
-    "code/epoll_server/echo_client_multi-3c37d733.o.tmp",
-    "code/epoll_server/multi_client",
-    "code/epoll_server/echo_client_multi-a229ddea.o.tmp",
-    "code/epoll_server/echo_client_multi.o",
-    "code/epoll_server/echo_client_multi-59d69da7.o.tmp",
-    "code/epoll_server/multi_flexing_server_kqueue.o",
-    "code/epoll_server/multi_flexing_server_kqueue-b6b37d36.o.tmp",
-    "code/epoll_server/echo_client_multi-87e3dd29.o.tmp",
+    "6. Archive/HTTP 완벽 가이드/5.0 5부 콘텐츠 발행 및 배포.md",
+    "6. Archive/HTTP 완벽 가이드/3.0 3부 식별, 인가, 보안.md",
+    "6. Archive/HTTP 완벽 가이드/2.05.8.3 리다이렉션.md",
+    "6. Archive/HTTP 완벽 가이드/2.05.8.2 MIME 타입 결정하기.md",
+    "6. Archive/HTTP 완벽 가이드/2.05.7.3 동적 콘텐츠 리소스 매핑.md",
+    "6. Archive/HTTP 완벽 가이드/2.05.7.2 디렉터리 목록.md",
+    "6. Archive/HTTP 완벽 가이드/2.05.7.1 Docroot.md",
+    "6. Archive/HTTP 완벽 가이드/2.05 웹 서버.md",
+    "6. Archive/HTTP 완벽 가이드/1.03-3.8 DELETE.md",
+    "6. Archive/HTTP 완벽 가이드/1.03-3.5 POST.md",
+    "6. Archive/HTTP 완벽 가이드/1.03-3.4 PUT.md",
+    "6. Archive/HTTP 완벽 가이드/1.03-3.2 GET.md",
+    "6. Archive/HTTP 완벽 가이드/1.03-3 메서드.md",
+    "6. Archive/HTTP 완벽 가이드/2.0 2부 HTTP 아키텍쳐.md",
+    "6. Archive/HTTP 완벽 가이드/1.04 커넥션 관리.md",
+    "6. Archive/HTTP 완벽 가이드/1.03-2 메시지의 문법-헤더.md",
+    "6. Archive/HTTP 완벽 가이드/1.03-2 메시지의 문법-시작줄.md",
+    "6. Archive/HTTP 완벽 가이드/1.03-2 메시지의 문법.md",
+    "6. Archive/HTTP 완벽 가이드/1.03-1 메시지의 구성.md",
+    "6. Archive/HTTP 완벽 가이드/1.03 HTTP 메시지.md",
+    "6. Archive/HTTP 완벽 가이드/1.02-2 스킴의 포맷.md",
+    "6. Archive/HTTP 완벽 가이드/1.02-1 URL 문법.md",
+    "6. Archive/HTTP 완벽 가이드/1.02 URL과 리소스.md",
+    "6. Archive/HTTP 완벽 가이드/1.01-6 웹의 구성 요소.md",
+    "6. Archive/HTTP 완벽 가이드/1.01-5 프로토콜 버전.md",
     "첨부파일/Pasted Image 20230917143926_144.png",
     "첨부파일/Pasted image 20230912161646.png",
     "첨부파일/Pasted image 20230817163141.png",

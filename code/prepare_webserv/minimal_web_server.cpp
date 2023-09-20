@@ -101,12 +101,13 @@ int	handleRequestGET(headerInfo& clientRequest, struct kevent client)
 		write(client.ident, responseHeaders.str().c_str(), responseHeaders.str().size());
 		while (requestedFile.eof() == false)
 		{
-			requestedFile.read(static_cast<struct udata>(client.udata), sizeof(static_cast<struct udata>(client.udata)));
-			write(client.ident, static_cast<struct udata>(client.udata), requestedFile.gcount());
+			requestedFile.read(static_cast<struct udata *>(client.udata)->buf, sizeof(static_cast<struct udata *>(client.udata)->buf));
+			write(client.ident, static_cast<struct udata *>(client.udata)->buf, requestedFile.gcount());
 		}
 		requestedFile.close();
 		std::cout << Colors::Cyan << clientRequest.url << " send complete" << Colors::Reset << std::endl;
 	}
+	return (0);
 }
 
 int main(void)
@@ -135,10 +136,9 @@ int main(void)
 	initKqueue(kq); // kernel queue file descriptor 생성
 
 	ChangeList changeList;
-	// change list와 event list를 따로 두는 이유 read / write / error / signal 등
 	// 하지만 error를 따로 이벤트 감지할 필요가 있는지의 의문이 든다. -> eventlist[i].flag & EV_ERROR == true 와 어떤 차이가 있는가?
 	struct kevent eventList[MAX_NEVENTS]; 
-	// 일반적으로 MacOS는 Kqueue 최대 개수에 제한을 두지 않는다.
+	// 일반적으로 MacOS는 Kqueue 최대 개수에 제한을 두지 않는다. 설정할 수 있게 해야 함.
 	int occurEventNum; // kevent에서 발생한 이벤트 개수
 	
 	// udata에 각 소켓의 버퍼, 설정, 에러 등을 담아서 이벤트 발생 시 해당 부분을 핸들링 할 수 있도록 한다.
