@@ -1,34 +1,52 @@
-#include <fstream>
-#include <iostream>
-#include <unistd.h>
-#include "./Colors.hpp"
+#include "Colors.hpp"
+#include "MultiTree.hpp"
 
-int main(void)
+void leak(void)
 {
-	std::ifstream	file;
-	std::string		fileName("./images/animal01.png");
-	char			buffer[1024];
+	system("leaks $PPID");
+}
 
-	// file.open(fileName, std::ios::in | std::ios::binary);
-	file.open(fileName, std::ios::binary);
-	// file.open(fileName);
-	std::cout << Colors::BlueString("try open " + fileName) << std::endl;
-	if (file.is_open() == false)
-	{
-		std::cerr << Colors::RedString("open failed: " + fileName) << std::endl; 
-		write(1, "404 Not found\r\n\r\n", 16);
-	}
+int main()
+{
+	// atexit(leak);
+	locationBlock *rootData = new locationBlock;
+	rootData->uri = "/";
+	MultiTreeNode *temp = new MultiTreeNode(rootData);
+	MultiTree rootTree(*temp);
+
+	locationBlock *home = new locationBlock;
+	home->uri = "home/";
+	locationBlock *src = new locationBlock;
+	src->uri = "src/";
+	locationBlock *http = new locationBlock;
+	http->uri = "http/";
+	locationBlock *httphtml = new locationBlock;
+	httphtml->uri = "http/html/";
+	locationBlock *verylong = new locationBlock;
+	verylong->uri = "veryverylonglonglong/";
+
+	locationBlock *test = new locationBlock;
+	test->uri = "a/";
+
+	locationBlock *ftp = new locationBlock;
+	ftp->uri = "ftp/";
+	locationBlock *html = new locationBlock;
+	html->uri = "html/";
+
+	rootTree.GetRoot()->AddChildNode(home);
+	rootTree.searchNodeOrNull("/home/")->AddChildNode(src);
+	rootTree.searchNodeOrNull("/home/src/")->AddChildNode(ftp);
+	rootTree.searchNodeOrNull("/home/src/")->AddChildNode(http);
+	rootTree.searchNodeOrNull("/home/src/")->AddChildNode(httphtml);
+	rootTree.searchNodeOrNull("/home/src/http/html/")->AddChildNode(verylong);
+	rootTree.searchNodeOrNull("/home/src/http/html/veryverylonglonglong/")->AddChildNode(test);
+	rootTree.searchNodeOrNull("/home/src/http/")->AddChildNode(html);
+
+	std::cout << Colors::BoldMagentaString("\n[let's get it on]") << std::endl;
+	temp = rootTree.searchNodeOrNull("/home/sr/http/htm/eryverylonglonglong/index.html");
+	if (temp == NULL)
+		std::cout << "location block's URI: " << "N U L L" << std::endl;
 	else
-	{
-		file.seekg(0, std::ios::end);
-		std::streampos fileSize = file.tellg();
-		file.seekg(0, std::ios::beg);
-		std::cout << "Content-length: " << fileSize << "\r\n\r\n";
-		while (file.eof() == false)
-		{
-			file.read(buffer, sizeof(buffer));
-			write(1, buffer, file.gcount());
-		}
-		file.close();
-	}
+		std::cout << "location block's URI: " << temp->GetURI() << std::endl;
+	return (0);
 }

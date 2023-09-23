@@ -17,14 +17,6 @@ typedef struct headerInfo
 	bool		keepAliveFlag;
 } headerInfo;
 
-typedef enum eventInfo // 필요한가?
-{
-	READ_EVENT=0,
-	WRITE_EVENT,
-	ERROR_EVENT,
-	SIGNAL_EVENT,
-} eventInfo;
-
 void	initKqueue(int& kq)
 {
 	kq = kqueue();
@@ -85,27 +77,24 @@ int	handleRequestGET(headerInfo& clientRequest, struct kevent client)
 	}
 	else
 	{
-		std::stringstream responseHeaders;
 		requestedFile.seekg(0, std::ios::end);
 		std::streampos fileSize = requestedFile.tellg();
 		requestedFile.seekg(0, std::ios::beg);
 		// HTTP version 낮은 걸로 바꿔서 보낼 수 있어야 함.
-		responseHeaders << "HTTP/1.1 200 OK\r\n";
-		responseHeaders << "Content-type: ";
+		static_cast<struct udata *>(client.udata)->response << "HTTP/1.1 200 OK\r\nContent-type: ";
 		if (extTemp == "png")
-			responseHeaders << "image/";
+			static_cast<struct udata *>(client.udata)->response << "image/";
 		else
-			responseHeaders << "text/";
-		responseHeaders << extTemp << CRLF << "Content-length: " << fileSize << "\r\n\r\n";
-		write(1, responseHeaders.str().c_str(), responseHeaders.str().size());
-		write(client.ident, responseHeaders.str().c_str(), responseHeaders.str().size());
+			static_cast<struct udata *>(client.udata)->response << "text/";
+		static_cast<struct udata *>(client.udata)->response << extTemp << CRLF << "Content-length: " << fileSize << "\r\n\r\n";
+		// write(1, response.str().c_str(), response.str().size());
+		write(client.ident, static_cast<struct udata *>(client.udata)->response.str().c_str(), static_cast<struct udata *>(client.udata)->response.str().size());
 		while (requestedFile.eof() == false)
 		{
 			requestedFile.read(static_cast<struct udata *>(client.udata)->buf, sizeof(static_cast<struct udata *>(client.udata)->buf));
 			write(client.ident, static_cast<struct udata *>(client.udata)->buf, requestedFile.gcount());
 		}
 		requestedFile.close();
-		std::cout << Colors::Cyan << clientRequest.url << " send complete" << Colors::Reset << std::endl;
 	}
 	return (0);
 }
@@ -162,12 +151,6 @@ int main(void)
 			{
 				udata *clientData = static_cast<udata *>(eventList[i].udata);
 				str_len = read(eventList[i].ident, clientData->buf, BUFFER_SIZE);
-				/**
-				 * string에 담아서 파싱해도 괜찮을까? 속도 등 효율 측면에서 생각해볼 때.
-				 * CRLF까지 읽어야 하므로.. 일단 개행까지 읽으며 처리해주고, 보낼 때만 잘 해결을 해주면 괜찮으려나?
-				 * 파싱 규칙을 파악하기 위해서 RFC 문서를 읽도록 하자. 
-				 * <Click with CMD> https://www.rfc-editor.org/rfc/rfc2616
-				 */
 				std::cout << Colors::Magenta << "received message\n" << clientData->buf << Colors::Reset << std::endl;
 				if (str_len == 0) // close request
 				{
@@ -179,13 +162,9 @@ int main(void)
 				{
 					parseBuf(clientData->buf, clientRequest);
 					/* client 요청 분석 */
-					// if (소켓의 요청이 keep alive 일 때)
-					// int opt = true;
-					// setsockopt(clnt_sock, SOL_SOCKET, SO_KEEPALIVE, &opt, sizeof(opt));
-					
 					if (clientRequest.method == "GET")
 					{
-
+						handleRequestGET(clientRequest, eventList[i]);
 					}
 					/**
 					 * 각 요청에 대한 HTTP 헤더 / 바디를 생성해주는 모듈 필요
