@@ -10,16 +10,6 @@
 #define ERROR -1
 #define CRLF "\r\n"
 
-void	initKqueue(int& kq)
-{
-	kq = kqueue();
-	if (kq == -1)
-	{
-		perror("kqueue() error");
-		exit(1);
-	}
-}
-
 int main(void)
 {
 	Server server;
@@ -35,16 +25,18 @@ int main(void)
 	socklen_t adr_size;
 	int str_len, i;
 
-	int kq;
-	initKqueue(kq); // kernel queue file descriptor 생성
+	int 	kq = kqueue();
+	if (kq == -1)
+		exit(1);
 
 	ChangeList changeList;
 	struct kevent eventList[MAX_NEVENTS]; 
-	// 일반적으로 MacOS는 Kqueue 최대 개수에 제한을 두지 않는다. 설정할 수 있게 해야 함.
 	int occurEventNum; // kevent에서 발생한 이벤트 개수
 	
 	// udata에 각 소켓의 버퍼, 설정, 에러 등을 담아서 이벤트 발생 시 해당 부분을 핸들링 할 수 있도록 한다.
 	changeList.changeEvent(server.getSocket(), EVFILT_READ, EV_ADD);
+	int value = true;
+	setsockopt(server.getSocket(), SOL_SOCKET, SO_REUSEPORT | SO_REUSEADDR, &value, sizeof(sockaddr_in));
 	headerInfo clientRequest;
 
 	while (1)
@@ -62,7 +54,7 @@ int main(void)
 			{
 				adr_size = sizeof(clnt_adr);
 				clnt_sock = accept(server.getSocket(), (struct sockaddr *)&clnt_adr, &adr_size);
-				changeList.changeEvent(clnt_sock, EVFILT_READ | EVFILT_WRITE, EV_ADD);
+				changeList.changeEvent(clnt_sock, EVFILT_READ, EV_ADD);
 				fcntl(clnt_sock, F_SETFL, O_NONBLOCK);
 				std::cerr << "connected client: " << clnt_sock << std::endl;
 			}
@@ -72,14 +64,14 @@ int main(void)
 				str_len = currentEventUdata->recvFromClient(eventList[i].ident);
 				if (str_len == 0) // close request -> write 이벤트도 등록해야 한다.
 				{
-					changeList.changeEvent(eventList[i].ident, EVFILT_READ | EVFILT_WRITE, EV_DELETE);
+					changeList.changeEvent(eventList[i].ident, EVFILT_READ, EV_DELETE);
 					close(eventList[i].ident);
-					printf("close client: %lu\n", eventList[i].ident);						
+					std::cout << "close client:" << eventList[i].ident << std::endl;
 				}
 				else if (str_len < 0)
 				{
 					close(eventList[i].ident);
-					printf("ERROR: recv error: force close client: %lu\n", eventList[i].ident);
+					std::cout << "ERROR: recv error: force close client: " << eventList[i].ident << std::endl;
 				}
 				else
 				{

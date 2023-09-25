@@ -149,6 +149,7 @@ size_t UserData::sendToClient(int fd)
 	{
 		std::cout << Colors::RedString("send() error") << std::endl;
 	}
+	shutdown(fd, SHUT_RDWR);
 	return (len);
 }
 
