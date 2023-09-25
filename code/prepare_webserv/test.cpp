@@ -6,47 +6,61 @@ void leak(void)
 	system("leaks $PPID");
 }
 
+static void addChildURI(MultiTreeNode* nodeOrNull, std::string uri)
+{
+	if (nodeOrNull == NULL)
+	{
+		std::cout << Colors::RedString("node is NULL!") << std::endl;
+		return ;
+	}
+	locationBlock *data = new locationBlock;
+	data->uri = uri;
+	nodeOrNull->AddChildNode(data);
+	std::cout << Colors::Green << "complete add " << uri << Colors::Reset << std::endl;
+}
+
+void printSearchedResult(MultiTree& root, std::string uri)
+{
+	MultiTreeNode *temp;
+
+	temp = root.searchNodeOrNull(uri);
+	if (temp == NULL)
+		std::cout << Colors::Red << "failed to find " << uri << Colors::Reset << std::endl;
+	else
+		std::cout << Colors::Cyan << "found node's URI: " << temp->GetURI() << Colors::Reset << std::endl;
+}
+
 int main()
 {
-	// atexit(leak);
+	atexit(leak);
 	locationBlock *rootData = new locationBlock;
 	rootData->uri = "/";
 	MultiTreeNode *temp = new MultiTreeNode(rootData);
-	MultiTree rootTree(*temp);
+	MultiTree root(*temp);
 
-	locationBlock *home = new locationBlock;
-	home->uri = "home/";
-	locationBlock *src = new locationBlock;
-	src->uri = "src/";
-	locationBlock *http = new locationBlock;
-	http->uri = "http/";
-	locationBlock *httphtml = new locationBlock;
-	httphtml->uri = "http/html/";
-	locationBlock *verylong = new locationBlock;
-	verylong->uri = "veryverylonglonglong/";
+	// 경로 앞뒤의 '/'처리 결정해야 함
+	addChildURI(root.GetRoot(), "home/");
+	addChildURI(root.GetRoot(), "etc/");
+	addChildURI(root.searchNodeOrNull("/"), "src/");
+	addChildURI(root.searchNodeOrNull("/home/"), "src/");
+	addChildURI(root.searchNodeOrNull("/home/"), "usr/");
+	addChildURI(root.searchNodeOrNull("/home/src/"), "http/");
+	addChildURI(root.searchNodeOrNull("/home/src/"), "http/html");
+	addChildURI(root.searchNodeOrNull("/home/src/"), "http/css");
+	addChildURI(root.searchNodeOrNull("/home/src/"), "http/ftp");
+	addChildURI(root.searchNodeOrNull("/home/src/"), "http/image");
+	addChildURI(root.searchNodeOrNull("/home/src/http/"), "html/");
+	addChildURI(root.searchNodeOrNull("/home/src/http/"), "css/");
+	addChildURI(root.searchNodeOrNull("/home/src/image/"), "png/");
+	addChildURI(root.searchNodeOrNull("/home/src/image/"), "jpg/");
 
-	locationBlock *test = new locationBlock;
-	test->uri = "a/";
+	std::cout << Colors::BoldWhiteString("\n[Let's get it on]") << std::endl;
+	printSearchedResult(root, "/home/src/http/html/index.html");
+	printSearchedResult(root, "/home/src/http/http.conf");
+	printSearchedResult(root, "/home/src/http/css/style.css");
+	printSearchedResult(root, "/etc/something");
+	printSearchedResult(root, "\'nothing\'");
+	printSearchedResult(root, "/something");
 
-	locationBlock *ftp = new locationBlock;
-	ftp->uri = "ftp/";
-	locationBlock *html = new locationBlock;
-	html->uri = "html/";
-
-	rootTree.GetRoot()->AddChildNode(home);
-	rootTree.searchNodeOrNull("/home/")->AddChildNode(src);
-	rootTree.searchNodeOrNull("/home/src/")->AddChildNode(ftp);
-	rootTree.searchNodeOrNull("/home/src/")->AddChildNode(http);
-	rootTree.searchNodeOrNull("/home/src/")->AddChildNode(httphtml);
-	rootTree.searchNodeOrNull("/home/src/http/html/")->AddChildNode(verylong);
-	rootTree.searchNodeOrNull("/home/src/http/html/veryverylonglonglong/")->AddChildNode(test);
-	rootTree.searchNodeOrNull("/home/src/http/")->AddChildNode(html);
-
-	std::cout << Colors::BoldMagentaString("\n[let's get it on]") << std::endl;
-	temp = rootTree.searchNodeOrNull("/home/sr/http/htm/eryverylonglonglong/index.html");
-	if (temp == NULL)
-		std::cout << "location block's URI: " << "N U L L" << std::endl;
-	else
-		std::cout << "location block's URI: " << temp->GetURI() << std::endl;
 	return (0);
 }
