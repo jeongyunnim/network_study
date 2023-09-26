@@ -26,12 +26,13 @@ public:
 	const std::stringstream& getReceived(void) const;
 	const std::string& getResponse(void) const;
 	int	getMethod(void) const;
+	int	getfd(void) const;
 	bool getWriteFlag(void) const;
 	int	generateResponse(void);
-	int	generateGetRequest(void);
+	int	generateGetResponse(void);
 	int	parseRequest(std::stringstream& request);
-	size_t recvFromClient(int fd);
-	size_t sendToClient(int fd);
+	int recvFromClient(int fd);
+	int sendToClient(int fd);
 	
 private:
 	UserData(void);

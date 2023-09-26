@@ -42,7 +42,7 @@ int	UserData::parseRequest(std::stringstream& request)
 	return (0);
 }
 
-int	UserData::generateGetRequest(void)
+int	UserData::generateGetResponse(void)
 {
 	std::ifstream requestedFile;
 	std::string extTemp;
@@ -78,7 +78,6 @@ int	UserData::generateGetRequest(void)
 		_response += fileContent.str();
 		requestedFile.close();
 		sendToClient(_fd);
-		_writeFlag = true;
 	}
 	return (0);
 }
@@ -120,26 +119,27 @@ int	UserData::generateResponse(void)
 		return (ERROR);
 	}
 	if (_method == GET)
-		generateGetRequest();
+		generateGetResponse();
 	return (0);
 }
 
 
-size_t UserData::recvFromClient(int fd)
+int UserData::recvFromClient(int fd)
 {
 	int len;
 
 	len = read(fd, _buf, BUFFER_SIZE);
-	std::cout << Colors::BoldBlue << "received message from client " << fd << std::endl;
+	std::cout << Colors::BoldBlue << "received message from client " << fd << "\n" << std::endl;
 	for (int i = 0; i < len; i++)
 	{
 		std::cout << _buf[i];
 		_received << _buf[i];
 	}
+	std::cout << Colors::Reset << std::endl;
 	return (len);
 }
 
-size_t UserData::sendToClient(int fd)
+int UserData::sendToClient(int fd)
 {
 	size_t len;
 
@@ -148,8 +148,8 @@ size_t UserData::sendToClient(int fd)
 	if (len < 0)
 	{
 		std::cout << Colors::RedString("send() error") << std::endl;
+		exit(1);
 	}
-	shutdown(fd, SHUT_RDWR);
 	return (len);
 }
 
@@ -157,7 +157,8 @@ ChangeList::ChangeList(void)
 	:	_keventVector(std::vector<struct kevent>())
 {}
 
-ChangeList::~ChangeList(void) {}
+ChangeList::~ChangeList(void) 
+{}
 
 void ChangeList::changeEvent(uintptr_t ident, int filter, int flags)
 {
@@ -165,25 +166,22 @@ void ChangeList::changeEvent(uintptr_t ident, int filter, int flags)
 	struct kevent	target;
 	UserData *udata;
 	/* init udata */
-	if (flags == EV_DELETE)
-	{
-		for (std::vector<struct kevent>::iterator it = _keventVector.begin(); it != _keventVector.end(); it++)
-		{
-			if (it->ident == ident)
-			{
-				delete static_cast<UserData*>(it->udata);
-				return ;
-			}
-		}
-	}
-	udata = new UserData(ident);
+
 	target.ident = ident;
 	target.filter = filter;
 	target.flags = flags;
 	target.fflags = 0;
 	target.data = 0;
-	target.udata = udata;
-	_keventVector.push_back(target);
+	if (flags == EV_DELETE)
+	{
+		kevent(ident, &target, 1, NULL, 0, 0);
+	}
+	else
+	{
+		udata = new UserData(ident);
+		target.udata = udata;
+		_keventVector.push_back(target);
+	}
 }
 
 void ChangeList::clearEvent(void)

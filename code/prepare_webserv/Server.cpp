@@ -23,7 +23,7 @@ int		Server::initServerListeningSocket(void)
 		std::cout << "bind() error" << std::endl;
 		return (-1);
 	}
-	if (listen(_socket, 5) == -1) // backlog 계획 해야 함. seige 부하테스트
+	if (listen(_socket, SOMAXCONN) == -1) // backlog 계획 해야 함. seige 부하테스트
 	{
 		std::cout << "listen() error" << std::endl;
 		return (-1);
