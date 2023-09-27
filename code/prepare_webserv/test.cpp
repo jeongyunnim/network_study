@@ -1,66 +1,28 @@
-#include "Colors.hpp"
-#include "MultiTree.hpp"
-
-void leak(void)
-{
-	system("leaks $PPID");
-}
-
-static void addChildURI(MultiTreeNode* nodeOrNull, std::string uri)
-{
-	if (nodeOrNull == NULL)
-	{
-		std::cout << Colors::RedString("node is NULL!") << std::endl;
-		return ;
-	}
-	locationBlock *data = new locationBlock;
-	data->uri = uri;
-	nodeOrNull->AddChildNode(data);
-	std::cout << Colors::Green << "complete add " << uri << Colors::Reset << std::endl;
-}
-
-void printSearchedResult(MultiTree& root, std::string uri)
-{
-	MultiTreeNode *temp;
-
-	temp = root.searchNodeOrNull(uri);
-	if (temp == NULL)
-		std::cout << Colors::Red << "failed to find " << uri << Colors::Reset << std::endl;
-	else
-		std::cout << Colors::Cyan << "found node's URI: " << temp->GetURI() << Colors::Reset << std::endl;
-}
+#include <iostream>
+#include <sstream>
 
 int main()
 {
-	atexit(leak);
-	locationBlock *rootData = new locationBlock;
-	rootData->uri = "/";
-	MultiTreeNode *temp = new MultiTreeNode(rootData);
-	MultiTree root(*temp);
+	std::stringstream ss;
+	std::string 	temp;
 
-	// 경로 앞뒤의 '/'처리 결정해야 함
-	addChildURI(root.GetRoot(), "home/");
-	addChildURI(root.GetRoot(), "etc/");
-	addChildURI(root.searchNodeOrNull("/"), "src/");
-	addChildURI(root.searchNodeOrNull("/home/"), "src/");
-	addChildURI(root.searchNodeOrNull("/home/"), "usr/");
-	addChildURI(root.searchNodeOrNull("/home/src/"), "http/");
-	addChildURI(root.searchNodeOrNull("/home/src/"), "http/html");
-	addChildURI(root.searchNodeOrNull("/home/src/"), "http/css");
-	addChildURI(root.searchNodeOrNull("/home/src/"), "http/ftp");
-	addChildURI(root.searchNodeOrNull("/home/src/"), "http/image");
-	addChildURI(root.searchNodeOrNull("/home/src/http/"), "html/");
-	addChildURI(root.searchNodeOrNull("/home/src/http/"), "css/");
-	addChildURI(root.searchNodeOrNull("/home/src/image/"), "png/");
-	addChildURI(root.searchNodeOrNull("/home/src/image/"), "jpg/");
+	ss << "HELLO WORLD.\r\n세상님 안녕하세요.\r\n";
 
-	std::cout << Colors::BoldWhiteString("\n[Let's get it on]") << std::endl;
-	printSearchedResult(root, "/home/src/http/html/index.html");
-	printSearchedResult(root, "/home/src/http/http.conf");
-	printSearchedResult(root, "/home/src/http/css/style.css");
-	printSearchedResult(root, "/etc/something");
-	printSearchedResult(root, "\'nothing\'");
-	printSearchedResult(root, "/something");
-
+	std::getline(ss, temp, '\n');
+	ss.seekg(0, std::ios::end);
+	std::cout << "line: " << temp << std::endl;
+	std::cout << "offset: " << ss.tellg() << std::endl;
+	std::cout << "good: " << ss.good() << std::endl;
+	std::cout << "bad: " << ss.bad() << std::endl;
+	std::cout << "eof: " << ss.eof() << std::endl;
+	std::cout << "fail: " << ss.fail() << std::endl;
+	ss.seekg(0);
+	std::getline(ss, temp, '\n');
+	std::cout << "line: " << temp << std::endl;
+	std::cout << "offset: " << ss.tellg() << std::endl;
+	std::cout << "good: " << ss.good() << std::endl;
+	std::cout << "bad: " << ss.bad() << std::endl;
+	std::cout << "eof: " << ss.eof() << std::endl;
+	std::cout << "fail: " << ss.fail() << std::endl;
 	return (0);
 }

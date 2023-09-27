@@ -1,9 +1,24 @@
 #include "ChangeList.hpp"
 
+int UserData::parseHeader(std::string& field)
+{
+	std::istringstream ss(field);
+	std::string header;
+	std::string value;
+	/**
+	 * @brief 의사코드
+	 * : 까지 읽음
+	 * ; 까지 읽음
+	 * 각 토큰별 제거
+	 */
+	return (0);
+}
+
 int	UserData::parseRequest(std::stringstream& request)
 {
 	std::string			temp;
 
+	request.seekg(0);
 	std::getline(request, temp, ' ');
 	if (temp == "GET")
 		_method = GET;
@@ -26,20 +41,22 @@ int	UserData::parseRequest(std::stringstream& request)
 		std::cout << temp << " version Error" << std::endl;
 		return (ERROR);
 	}
+
 	while (1)
 	{
 		std::getline(request, temp, '\n');
-		/* 유효성 검증 */
 		if (request.eof())
-			break ;
+			return (0);
+		else if (request.fail()) // 헤더가 너무 크다는 것.
+			return (ERROR);
 		else if (*(temp.end() - 1) == '\r')
 			temp.erase(temp.size() - 1);
-		//필요한 정보 저장하기..(map?) 그런데 굳이 저장 해야 하나? 파싱하면서 플래그만 켜주면 되는 거 아닌가?
 		if (temp == "")
-			break ;
+			return (0);
+		if (parseHeader(temp) == ERROR)
+			return (ERROR);
 	}
-	//post요청 어떻게?
-	return (0);
+	return (ERROR);
 }
 
 int	UserData::generateGetResponse(void)
@@ -56,7 +73,6 @@ int	UserData::generateGetResponse(void)
 		// 4XX error
 		std::cerr << Colors::RedString("open failed: ." + _uri) << std::endl; 
 		write(_fd, "HTTP/1.1 404 Not found\r\n\r\n", 26);
-		shutdown(_fd, SHUT_RDWR); // Linger 옵션을 걸고 close를 해야하는가?
 	}
 	else
 	{
@@ -64,7 +80,6 @@ int	UserData::generateGetResponse(void)
 		requestedFile.seekg(0, std::ios::end);
 		std::streampos fileSize = requestedFile.tellg();
 		requestedFile.seekg(0, std::ios::beg);
-		// HTTP version 낮은 걸로 바꿔서 보낼 수 있어야 함.
 		_response = "HTTP/1.1 200 OK\r\nContent-type: ";
 		if (extTemp == "png")
 			_response += "image/";
@@ -85,7 +100,8 @@ int	UserData::generateGetResponse(void)
 UserData::UserData(int fd)
 	:	_fd(fd)
 	,	_method(-1)
-	,	_writeFlag(0)
+	,	_status(0)
+	,	_headerFlag(0)
 	,	_received(std::string())
 	,	_response(std::string())
 {}
@@ -107,19 +123,40 @@ int	UserData::getMethod(void) const
 	return (_method);
 }
 
-bool	UserData::getWriteFlag(void) const
+static int checkReceivedHeader(std::stringstream& ss)
 {
-	return (_writeFlag);
+	std::string line;
+
+	ss.seekg(0, std::ios::end);
+	if (ss.tellg() >= 1024)
+		return (true);
+	ss.seekg(0, std::ios::beg);
+	while (1)
+	{
+		std::getline(ss, line, '\n');
+		if (ss.eof() == true)
+			return (false);
+		else if (line == "" || line == "\r")
+			return (true);
+		else
+			continue ;
+	}
 }
 
 int	UserData::generateResponse(void)
 {
-	if (parseRequest(_received) == ERROR)
-	{
+	_headerFlag = checkReceivedHeader(_received);
+	if (_headerFlag == ERROR)
 		return (ERROR);
+	else if (_headerFlag == false)
+		return (0);
+	else 
+	{
+		if (parseRequest(_received) == ERROR)
+			return (ERROR);
+		if (_method == GET)
+			generateGetResponse();
 	}
-	if (_method == GET)
-		generateGetResponse();
 	return (0);
 }
 
@@ -139,17 +176,29 @@ int UserData::recvFromClient(int fd)
 	return (len);
 }
 
+void UserData::initUserData(void)
+{
+	_method = -1;
+	_status = -1;
+	_headerFlag = -1;
+	_uri.clear();
+	_received.str("");
+	_response.clear();
+}
+
 int UserData::sendToClient(int fd)
 {
 	size_t len;
 
 	std::cout << Colors::BoldMagenta << "send to client " << fd << "\n" << Colors::Reset<< std::endl;
 	len = write(fd, _response.c_str(), _response.size()); // 큰 파일도 한 번에 보낼 수 있나?
+	len = write(1, _response.c_str(), _response.size()); // 큰 파일도 한 번에 보낼 수 있나?
 	if (len < 0)
 	{
 		std::cout << Colors::RedString("send() error") << std::endl;
 		exit(1);
 	}
+	initUserData();
 	return (len);
 }
 

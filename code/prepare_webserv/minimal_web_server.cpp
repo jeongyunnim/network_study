@@ -72,6 +72,7 @@ int main(void)
 				clnt_sock = accept(server.getSocket(), (struct sockaddr *)&clnt_adr, &adr_size);
 				changeList.changeEvent(clnt_sock, EVFILT_READ, EV_ADD);
 				setsockopt(clnt_sock, SOL_SOCKET, SO_LINGER, &lingerVal, sizeof(lingerVal));
+				setSocketKeepAlive(clnt_sock, 60, 5, 5);
 				fcntl(clnt_sock, F_SETFL, O_NONBLOCK);
 				std::cerr << "connected client: " << clnt_sock << std::endl;
 			}
